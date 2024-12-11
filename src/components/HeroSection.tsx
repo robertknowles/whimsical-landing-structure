@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome } from "lucide-react";
+import { Chrome, X } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -41,14 +41,26 @@ const HeroSection = () => {
         
         <motion.div
           variants={fadeUpVariants}
-          className="flex flex-wrap gap-4 justify-center"
+          className="flex flex-wrap gap-4 justify-center relative"
         >
-          <Button
-            size="lg"
-            className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
-          >
-            <Chrome className="mr-2 h-4 w-4" /> Add to Browser
-          </Button>
+          <div className="relative inline-block">
+            <Button
+              size="lg"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50"
+              disabled
+            >
+              <Chrome className="mr-2 h-4 w-4" /> Add to Browser
+            </Button>
+            <X className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-red-500 stroke-[3]" />
+            <motion.div
+              initial={{ opacity: 0, rotate: -10, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-white text-sm font-medium rotate-[-10deg] shadow-lg"
+            >
+              launching soon!
+            </motion.div>
+          </div>
         </motion.div>
       </motion.div>
     </section>
