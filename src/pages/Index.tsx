@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Grid, DollarSign, HelpCircle, Download } from "lucide-react";
+import { Grid, DollarSign, HelpCircle, Download, Code, Zap, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import FAQSection from "@/components/FAQSection";

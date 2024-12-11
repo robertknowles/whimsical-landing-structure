@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Browser } from "lucide-react";
+import { BrowserPlus } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -47,7 +47,7 @@ const HeroSection = () => {
             size="lg"
             className="glass hover:bg-white/20"
           >
-            <Browser className="mr-2 h-4 w-4" /> Add to Browser
+            <BrowserPlus className="mr-2 h-4 w-4" /> Add to Browser
           </Button>
         </motion.div>
       </motion.div>
