@@ -20,9 +20,9 @@ const HeroSection = () => {
       >
         <motion.div
           variants={fadeUpVariants}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full glass text-sm font-medium mx-auto"
+          className="inline-block mb-4 px-6 py-2 rounded-full glass text-lg font-medium mx-auto"
         >
-          Join the Waitlist
+          Join the Waitlist!
         </motion.div>
         
         <motion.h1
