@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-32 text-center">
+      <section className="container mx-auto px-4 pt-20 pb-12">
         <motion.div
           initial="hidden"
           animate="visible"
