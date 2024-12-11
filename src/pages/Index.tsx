@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, ArrowRight, Grid, DollarSign, HelpCircle, Download, Code, Zap, Shield } from "lucide-react";
 import FeatureSection from "@/components/FeatureSection";
+import FAQSection from "@/components/FAQSection";
 import {
   Menubar,
   MenubarContent,
@@ -186,6 +187,9 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-12 text-center text-muted-foreground">
