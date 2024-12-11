@@ -64,7 +64,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="absolute -bottom-20 left-1/2 -translate-x-1/2 whitespace-nowrap"
+              className="absolute -bottom-24 left-1/2 -translate-x-1/2 whitespace-nowrap text-center"
             >
               <Button
                 size="sm"
