@@ -22,7 +22,7 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="inline-block mb-4 px-4 py-1.5 rounded-full glass text-sm font-medium mx-auto"
         >
-          Introducing Our New Platform
+          Join the Waitlist
         </motion.div>
         
         <motion.h1
