@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Github, ArrowRight, Code, Zap, Shield } from "lucide-react";
+import FeatureSection from "@/components/FeatureSection";
 
 const Index = () => {
   const fadeUpVariants = {
@@ -62,6 +62,11 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* Features Section */}
+      <div className="container mx-auto px-4">
+        <FeatureSection />
+      </div>
 
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-24">
