@@ -45,7 +45,7 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="glass hover:bg-white/20"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
           >
             <Chrome className="mr-2 h-4 w-4" /> Add to Browser
           </Button>
