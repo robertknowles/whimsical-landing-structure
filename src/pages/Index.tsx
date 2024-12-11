@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Github, ArrowRight, Grid, DollarSign, HelpCircle, Download, Code, Zap, Shield } from "lucide-react";
+import { Grid, DollarSign, HelpCircle, Download } from "lucide-react";
+import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import FAQSection from "@/components/FAQSection";
 import {
   Menubar,
-  MenubarContent,
-  MenubarItem,
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
@@ -48,56 +46,7 @@ const Index = () => {
       </Menubar>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-32">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.1 } },
-          }}
-          className="max-w-4xl mx-auto"
-        >
-          <motion.div
-            variants={fadeUpVariants}
-            className="inline-block mb-4 px-4 py-1.5 rounded-full glass text-sm font-medium"
-          >
-            Introducing Our New Platform
-          </motion.div>
-          
-          <motion.h1
-            variants={fadeUpVariants}
-            className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
-          >
-            Supercharged Development Experience
-          </motion.h1>
-          
-          <motion.p
-            variants={fadeUpVariants}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-          >
-            Build faster and smarter with our next-generation development platform. Experience seamless integration, powerful tools, and enhanced productivity.
-          </motion.p>
-          
-          <motion.div
-            variants={fadeUpVariants}
-            className="flex flex-wrap gap-4 justify-center"
-          >
-            <Button
-              size="lg"
-              className="glass hover:bg-white/20"
-            >
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="glass-dark"
-            >
-              <Github className="mr-2 h-4 w-4" /> View on GitHub
-            </Button>
-          </motion.div>
-        </motion.div>
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
       <div className="container mx-auto px-4">
@@ -193,11 +142,6 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-12 text-center text-muted-foreground">
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="#" className="hover:text-primary transition-colors">
-            <Github className="h-6 w-6" />
-          </a>
-        </div>
         <p>© 2024 Your Platform. All rights reserved.</p>
       </footer>
     </div>
