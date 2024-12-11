@@ -60,20 +60,6 @@ const HeroSection = () => {
             >
               launching soon!
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="absolute -bottom-24 left-1/2 -translate-x-1/2 whitespace-nowrap text-center"
-            >
-              <Button
-                size="sm"
-                variant="outline"
-                className="glass hover:bg-white/20"
-              >
-                join the waitlist in the meantime
-              </Button>
-            </motion.div>
           </div>
         </motion.div>
       </motion.div>
