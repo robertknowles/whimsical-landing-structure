@@ -29,14 +29,14 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
-          Supercharged Development Experience
+          Tired of hunting through entire conversations just to find that one message?
         </motion.h1>
         
         <motion.p
           variants={fadeUpVariants}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
-          Build faster and smarter with our next-generation development platform. Experience seamless integration, powerful tools, and enhanced productivity.
+          Save specific messages, add contextual notes, and organize your ideas—effortlessly
         </motion.p>
         
         <motion.div
