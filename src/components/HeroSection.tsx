@@ -29,7 +29,7 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
-          Tired of hunting through entire conversations just to find that one message?
+          A browser extension to save specific messages, add contextual notes and organise your ideas
         </motion.h1>
         
         <motion.p
