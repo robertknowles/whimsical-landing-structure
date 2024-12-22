@@ -66,7 +66,7 @@ const HeroSection = () => {
             <motion.div
               key={index}
               variants={fadeUpVariants}
-              className="glass-card hover-card"
+              className="glass-card hover-card max-w-xs mx-auto"
             >
               <benefit.icon className="h-10 w-10 mb-4 text-primary" />
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
