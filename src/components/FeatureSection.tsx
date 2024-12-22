@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import VimeoPlayer from "./VimeoPlayer";
 
 interface Feature {
   title: string;
   description: string;
   videoUrl?: string;
   vimeoEmbed?: boolean;
+  vimeoId?: string;
   align: "left" | "right";
 }
 
@@ -14,6 +16,7 @@ const features: Feature[] = [
     title: "Board View",
     description: "Manage your issues in a real-time automated kanban board with a drag and drop interface.",
     vimeoEmbed: true,
+    vimeoId: "1041458304",
     align: "left"
   },
   {
@@ -94,16 +97,8 @@ const FeatureSection = () => {
             {/* Video */}
             <div className="w-full">
               <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
-                {feature.vimeoEmbed ? (
-                  <div style={{ padding: '55.33% 0 0 0', position: 'relative' }}>
-                    <iframe 
-                      src="https://player.vimeo.com/video/1041458304?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                      frameBorder="0" 
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                      title="(1)SavingMessages"
-                    />
-                  </div>
+                {feature.vimeoEmbed && feature.vimeoId ? (
+                  <VimeoPlayer videoId={feature.vimeoId} />
                 ) : (
                   <video
                     autoPlay
