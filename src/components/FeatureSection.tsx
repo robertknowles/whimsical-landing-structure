@@ -38,12 +38,6 @@ const features: Feature[] = [
     description: "Get insights into your team's performance with detailed analytics and reports.",
     videoUrl: "/placeholder.mp4",
     align: "right"
-  },
-  {
-    title: "Collaboration Tools",
-    description: "Work together seamlessly with real-time updates and integrated communication tools.",
-    videoUrl: "/placeholder.mp4",
-    align: "left"
   }
 ];
 
