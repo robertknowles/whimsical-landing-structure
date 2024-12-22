@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, X, Bookmark, StickyNote, FolderTree } from "lucide-react";
+import { Bookmark, StickyNote, FolderTree } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -23,11 +23,6 @@ const HeroSection = () => {
       icon: FolderTree,
       title: "Stay Organised",
       description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
-    },
-    {
-      icon: Chrome,
-      title: "Message Navigation",
-      description: "Click to return to specific messages from previous conversations.",
     }
   ];
 
@@ -60,13 +55,13 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               variants={fadeUpVariants}
-              className="glass-card hover-card max-w-xs mx-auto"
+              className="glass-card hover-card"
             >
               <benefit.icon className="h-10 w-10 mb-4 text-primary" />
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
@@ -85,9 +80,8 @@ const HeroSection = () => {
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
               disabled
             >
-              <Chrome className="mr-2 h-5 w-5" /> Add to Browser
+              Add to Browser
             </Button>
-            <X className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-red-500 stroke-[3]" />
             <motion.div
               initial={{ opacity: 0, rotate: -10, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
