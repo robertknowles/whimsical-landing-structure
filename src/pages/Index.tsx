@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Grid, DollarSign, HelpCircle, Download, Code, Zap, Shield } from "lucide-react";
+import { Grid, DollarSign, HelpCircle, Download, Bookmark, StickyNote, FolderTree } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
@@ -60,15 +60,15 @@ const Index = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {features.map((feature, index) => (
+          {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               variants={fadeUpVariants}
               className="glass-card hover-card"
             >
-              <feature.icon className="h-10 w-10 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <benefit.icon className="h-10 w-10 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+              <p className="text-muted-foreground">{benefit.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -149,21 +149,21 @@ const Index = () => {
   );
 };
 
-const features = [
+const benefits = [
   {
-    icon: Code,
-    title: "Modern Development",
-    description: "Write better code with modern tools and frameworks designed for today's development needs.",
+    icon: Bookmark,
+    title: "Save Key Moments",
+    description: "Bookmark entire messages or highlight specific sentences with precision.",
   },
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Experience blazing fast performance with our optimized infrastructure and caching system.",
+    icon: StickyNote,
+    title: "Add Context",
+    description: "Use sticky notes to annotate your chats with reminders or insights.",
   },
   {
-    icon: Shield,
-    title: "Enterprise Security",
-    description: "Rest easy with enterprise-grade security features and compliance standards built-in.",
+    icon: FolderTree,
+    title: "Stay Organized",
+    description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
   },
 ];
 
