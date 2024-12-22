@@ -55,7 +55,9 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
         >
-          Transform endless ChatGPT conversations into organized, actionable insights
+          ChatGPT is getting smarter and faster, but with it comes message overload and the challenge of keeping conversations in context.
+          <br /><br />
+          Transform endless ChatGPT conversations into clear, actionable insights.
         </motion.p>
 
         {/* Benefits Grid */}
