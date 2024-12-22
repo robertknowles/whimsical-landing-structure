@@ -31,7 +31,7 @@ const HeroSection = () => {
         >
           A browser extension to<br />
           <span className="text-emerald-500">save and organise specific</span><br />
-          messages in ChatGPT
+          <span className="text-emerald-500">messages</span> in ChatGPT
         </motion.h1>
         
         <motion.p
