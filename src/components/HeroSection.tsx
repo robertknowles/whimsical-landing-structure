@@ -24,6 +24,11 @@ const HeroSection = () => {
       title: "Stay Organized",
       description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
     },
+    {
+      icon: Chrome,
+      title: "Message Navigation",
+      description: "Click to return to specific messages from previous conversations.",
+    },
   ];
 
   return (
@@ -41,7 +46,7 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
           A browser extension<br />
-          to <span className="text-white">organize insights</span><br />
+          to <span className="text-white">organize</span> <span className="text-green-500">insights</span><br />
           in <span className="text-white">ChatGPT</span>
         </motion.h1>
         
@@ -55,13 +60,13 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               variants={fadeUpVariants}
-              className="glass-card hover-card"
+              className="glass-card hover-card max-w-xs mx-auto"
             >
               <benefit.icon className="h-10 w-10 mb-4 text-primary" />
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
