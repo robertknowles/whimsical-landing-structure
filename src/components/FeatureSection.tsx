@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react";
 interface Feature {
   title: string;
   description: string;
-  videoUrl: string;
+  videoUrl?: string;
+  vimeoEmbed?: boolean;
   align: "left" | "right";
 }
 
@@ -12,31 +13,31 @@ const features: Feature[] = [
   {
     title: "Board View",
     description: "Manage your issues in a real-time automated kanban board with a drag and drop interface.",
-    videoUrl: "/placeholder.mp4", // Replace with actual video URL
+    vimeoEmbed: true,
     align: "left"
   },
   {
     title: "List View",
     description: "Browse your issues and group them by labels, assignees, milestones, and more.",
-    videoUrl: "/placeholder.mp4", // Replace with actual video URL
+    videoUrl: "/placeholder.mp4",
     align: "right"
   },
   {
     title: "Timeline View",
     description: "Plan your issues by scheduling milestones and see the progress in a timeline.",
-    videoUrl: "/placeholder.mp4", // Replace with actual video URL
+    videoUrl: "/placeholder.mp4",
     align: "left"
   },
   {
     title: "Analytics Dashboard",
     description: "Get insights into your team's performance with detailed analytics and reports.",
-    videoUrl: "/placeholder.mp4", // Replace with actual video URL
+    videoUrl: "/placeholder.mp4",
     align: "right"
   },
   {
     title: "Collaboration Tools",
     description: "Work together seamlessly with real-time updates and integrated communication tools.",
-    videoUrl: "/placeholder.mp4", // Replace with actual video URL
+    videoUrl: "/placeholder.mp4",
     align: "left"
   }
 ];
@@ -93,16 +94,28 @@ const FeatureSection = () => {
             {/* Video */}
             <div className="w-full">
               <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-[600px] object-cover"
-                >
-                  <source src={feature.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {feature.vimeoEmbed ? (
+                  <div style={{ padding: '55.33% 0 0 0', position: 'relative' }}>
+                    <iframe 
+                      src="https://player.vimeo.com/video/1041458304?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                      frameBorder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      title="(1)SavingMessages"
+                    />
+                  </div>
+                ) : (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-[600px] object-cover"
+                  >
+                    <source src={feature.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
               </div>
             </div>
           </motion.div>
