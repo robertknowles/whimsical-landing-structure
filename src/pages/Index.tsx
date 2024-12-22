@@ -27,18 +27,17 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <NavigationMenu />
       <HeroSection />
+      {showScroll && (
+        <div className="container mx-auto px-4 flex justify-center -mt-32 mb-8">
+          <ChevronDown size={36} strokeWidth={2.5} className="animate-bounce text-white/90 hover:text-white transition-colors" />
+        </div>
+      )}
       <div className="container mx-auto px-4 -mt-24">
         <FeatureSection />
       </div>
       <PricingSection />
       <FAQSection />
       <Footer />
-      
-      {showScroll && (
-        <div className="fixed left-1/2 bottom-4 -translate-x-1/2 animate-bounce text-white/90 hover:text-white transition-colors">
-          <ChevronDown size={36} strokeWidth={2.5} />
-        </div>
-      )}
     </div>
   );
 };
