@@ -27,7 +27,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 pt-16 pb-64">
+    <section className="container mx-auto px-4 pt-24 pb-64">
       <motion.div
         initial="hidden"
         animate="visible"
