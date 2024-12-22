@@ -11,19 +11,24 @@ const HeroSection = () => {
   const benefits = [
     {
       icon: Bookmark,
-      title: "Save Key Moments",
-      description: "Bookmark entire messages or highlight specific sentences with precision.",
+      title: "Save Key Snippets",
+      description: "Bookmark entire messages or use our highlighting tool to capture specific sentences with precision.",
     },
     {
       icon: StickyNote,
       title: "Add Context",
-      description: "Use sticky notes to annotate your chats with reminders or insights.",
+      description: "Pin sticky notes to messages to annotate them with reminders or insights.",
     },
     {
       icon: FolderTree,
-      title: "Stay Organized",
+      title: "Stay Organised",
       description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
     },
+    {
+      icon: Chrome,
+      title: "Message Navigation",
+      description: "Click to return to specific messages from previous conversations.",
+    }
   ];
 
   return (
@@ -55,13 +60,13 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               variants={fadeUpVariants}
-              className="glass-card hover-card"
+              className="glass-card hover-card max-w-xs mx-auto"
             >
               <benefit.icon className="h-10 w-10 mb-4 text-primary" />
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
