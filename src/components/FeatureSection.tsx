@@ -14,7 +14,7 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Save Specific Messages",
-    description: "- Bookmark individual messages or key snippets.\n\n- Save only what matters, without the clutter of entire conversations.\n\n- Quickly access saved insights for reference.",
+    description: "<ul class='space-y-2 list-disc pl-4'><li>Bookmark individual messages or key snippets.</li><li>Save only what matters, without the clutter of entire conversations.</li><li>Quickly access saved insights for reference.</li></ul>",
     vimeoEmbed: true,
     vimeoId: "1041458304",
     align: "left"
@@ -87,7 +87,10 @@ const FeatureSection = () => {
             }`}>
               <div className="max-w-lg space-y-4">
                 <h3 className="text-3xl font-bold tracking-tight">{feature.title}</h3>
-                <p className="text-lg text-muted-foreground">{feature.description}</p>
+                <p 
+                  className="text-lg text-muted-foreground"
+                  dangerouslySetInnerHTML={{ __html: feature.description }}
+                />
                 <button className="group flex items-center text-primary hover:text-primary/80 transition-colors">
                   Learn more{" "}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
