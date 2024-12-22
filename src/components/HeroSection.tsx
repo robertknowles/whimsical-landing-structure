@@ -36,7 +36,9 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
-          Save specific messages, add contextual notes, and organize your ideas—effortlessly
+          • Bookmark or highlight specific messages<br />
+          • Add contextual sticky notes<br />
+          • Organise individual messages into folders
         </motion.p>
         
         <motion.div
