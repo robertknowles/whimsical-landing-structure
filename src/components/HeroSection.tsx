@@ -8,37 +8,27 @@ const HeroSection = () => {
     {
       icon: MessageSquare,
       title: "Message Bookmarking",
-      description: (<>
-        <span className="text-emerald-500">Bookmark</span> entire messages to save key moments.
-      </>),
+      description: "Bookmark entire messages to save key moments.",
     },
     {
       icon: Highlighter,
       title: "Highlighting Tool",
-      description: (<>
-        <span className="text-emerald-500">Highlight</span> specific sentences with precision.
-      </>),
+      description: "Highlight specific sentences with precision.",
     },
     {
       icon: StickyNote,
       title: "Sticky Notes",
-      description: (<>
-        Pin <span className="text-emerald-500">notes</span> to messages for reminders or insights.
-      </>),
+      description: "Pin notes to messages for reminders or insights.",
     },
     {
       icon: FolderTree,
       title: "Folder System",
-      description: (<>
-        <span className="text-emerald-500">Organize</span> messages and notes into folders.
-      </>),
+      description: "Organize messages and notes into folders.",
     },
     {
       icon: Navigation,
       title: "Navigation",
-      description: (<>
-        <span className="text-emerald-500">Jump back</span> to original messages easily.
-      </>),
+      description: "Jump back to original messages easily.",
     }
   ];
 
