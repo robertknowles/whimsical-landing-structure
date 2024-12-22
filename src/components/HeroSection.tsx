@@ -86,14 +86,14 @@ const HeroSection = () => {
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
               disabled
             >
-              <Chrome className="mr-2" />
+              <Chrome className="w-6 h-6 mr-2" />
               Add to Browser
             </Button>
             <motion.div
               initial={{ opacity: 0, rotate: -10, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-5 py-1 rounded-full text-white text-base font-medium rotate-[-10deg] shadow-lg"
+              className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-4 py-0.5 rounded-full text-white text-sm font-medium rotate-[-10deg] shadow-lg"
             >
               launching soon!
             </motion.div>
