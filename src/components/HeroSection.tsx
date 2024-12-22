@@ -80,7 +80,7 @@ const HeroSection = () => {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12 max-w-7xl mx-auto"
         >
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
