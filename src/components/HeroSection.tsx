@@ -36,13 +36,6 @@ const HeroSection = () => {
         }}
         className="max-w-4xl mx-auto text-center"
       >
-        <motion.div
-          variants={fadeUpVariants}
-          className="inline-block mb-4 px-6 py-2 rounded-full glass text-lg font-medium mx-auto"
-        >
-          Join the Waitlist!
-        </motion.div>
-        
         <motion.h1
           variants={fadeUpVariants}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
