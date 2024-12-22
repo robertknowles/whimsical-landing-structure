@@ -14,13 +14,13 @@ const BenefitCard = ({ icon: Icon, title, description }: BenefitCardProps) => {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="glass-card hover-card"
+      className="glass-card h-[140px] flex flex-col items-center justify-center px-8"
     >
-      <div className="flex justify-center">
-        <Icon className="h-10 w-10 mb-4 text-primary" />
+      <div className="flex justify-center mb-2">
+        <Icon className="h-8 w-8 text-primary" />
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-lg font-semibold mb-1">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </motion.div>
   );
 };

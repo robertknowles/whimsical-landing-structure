@@ -50,7 +50,7 @@ const HeroSection = () => {
         variants={{
           visible: { transition: { staggerChildren: 0.1 } },
         }}
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-6xl mx-auto text-center"
       >
         <motion.h1
           variants={{
@@ -74,13 +74,12 @@ const HeroSection = () => {
           Transform endless ChatGPT conversations into clear, actionable insights
         </motion.p>
 
-        {/* Benefits Grid */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12 max-w-7xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 w-full"
         >
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
