@@ -82,7 +82,7 @@ const FeatureSection = () => {
             className="flex flex-col gap-12"
           >
             {/* Content */}
-            <div className={`flex items-center justify-between max-w-7xl mx-auto w-full px-4 ${
+            <div className={`flex items-center justify-between max-w-7xl mx-auto w-full px-8 lg:px-12 ${
               feature.align === "right" ? "flex-row-reverse" : ""
             }`}>
               <div className="max-w-lg space-y-4">
