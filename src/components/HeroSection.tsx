@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Bookmark, StickyNote, FolderTree, Chrome } from "lucide-react";
+import { Bookmark, StickyNote, FolderTree, Chrome, MessageSquare, Highlighter, Navigation } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -10,24 +10,38 @@ const HeroSection = () => {
 
   const benefits = [
     {
-      icon: Bookmark,
-      title: "Save Key Snippets",
+      icon: MessageSquare,
+      title: "Message Bookmarking",
       description: (<>
-        <span className="text-emerald-500">Bookmark</span> entire messages or use our <span className="text-emerald-500">Highlighting Tool</span> to capture specific sentences with precision.
+        <span className="text-emerald-500">Bookmark</span> entire messages to save key moments.
+      </>),
+    },
+    {
+      icon: Highlighter,
+      title: "Highlighting Tool",
+      description: (<>
+        <span className="text-emerald-500">Highlight</span> specific sentences with precision.
       </>),
     },
     {
       icon: StickyNote,
-      title: "Add Context",
+      title: "Sticky Notes",
       description: (<>
-        Pin <span className="text-emerald-500">Sticky Notes</span> to messages to annotate them with reminders or insights.
+        Pin <span className="text-emerald-500">notes</span> to messages for reminders or insights.
       </>),
     },
     {
       icon: FolderTree,
-      title: "Stay Organised",
+      title: "Folder System",
       description: (<>
-        Group saved messages and sticky notes into an intuitive <span className="text-emerald-500">Folder Structure</span> for easy access.
+        <span className="text-emerald-500">Organize</span> messages and notes into folders.
+      </>),
+    },
+    {
+      icon: Navigation,
+      title: "Navigation",
+      description: (<>
+        <span className="text-emerald-500">Jump back</span> to original messages easily.
       </>),
     }
   ];
@@ -61,7 +75,7 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
@@ -93,7 +107,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, rotate: -10, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-4 py-0.5 rounded-full text-white text-sm font-medium rotate-[-10deg] shadow-lg"
+              className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-3 py-0.5 rounded-full text-white text-xs font-medium rotate-[-10deg] shadow-lg"
             >
               launching soon!
             </motion.div>
