@@ -29,7 +29,8 @@ const features: Feature[] = [
   {
     title: "Timeline View",
     description: "Plan your issues by scheduling milestones and see the progress in a timeline.",
-    videoUrl: "/placeholder.mp4",
+    vimeoEmbed: true,
+    vimeoId: "1041463171",
     align: "left"
   },
   {
