@@ -5,7 +5,7 @@ import FeatureSection from "@/components/FeatureSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
-import { ScrollText } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const Index = () => {
   const [showScroll, setShowScroll] = useState(true);
@@ -35,8 +35,8 @@ const Index = () => {
       <Footer />
       
       {showScroll && (
-        <div className="fixed bottom-8 right-8 animate-bounce text-white/80 hover:text-white transition-colors">
-          <ScrollText size={24} />
+        <div className="fixed left-1/2 bottom-12 -translate-x-1/2 animate-bounce text-white/90 hover:text-white transition-colors">
+          <ChevronDown size={36} strokeWidth={2.5} />
         </div>
       )}
     </div>
