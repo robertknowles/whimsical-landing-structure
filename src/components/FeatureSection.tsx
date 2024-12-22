@@ -91,10 +91,6 @@ const FeatureSection = () => {
                   className="text-lg text-muted-foreground"
                   dangerouslySetInnerHTML={{ __html: feature.description }}
                 />
-                <button className="group flex items-center text-primary hover:text-primary/80 transition-colors">
-                  Learn more{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </button>
               </div>
             </div>
 
