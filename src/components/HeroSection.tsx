@@ -30,8 +30,8 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
           A browser extension<br />
-          <span className="text-emerald-500">to organize insights</span><br />
-          <span className="text-emerald-500">in ChatGPT</span>
+          to <span className="text-emerald-500">organize insights</span><br />
+          in <span className="text-emerald-500">ChatGPT</span>
         </motion.h1>
         
         <motion.p
