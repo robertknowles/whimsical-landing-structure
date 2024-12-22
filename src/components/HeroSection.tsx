@@ -77,17 +77,17 @@ const HeroSection = () => {
           <div className="relative inline-block">
             <Button
               size="lg"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-xl px-10 py-4"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
               disabled
             >
-              <Chrome className="mr-3 h-6 w-6" /> Add to Browser
+              <Chrome className="mr-2 h-5 w-5" /> Add to Browser
             </Button>
             <X className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-red-500 stroke-[3]" />
             <motion.div
               initial={{ opacity: 0, rotate: -10, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white text-lg font-medium rotate-[-10deg] shadow-lg"
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-5 py-1 rounded-full text-white text-base font-medium rotate-[-10deg] shadow-lg"
             >
               launching soon!
             </motion.div>
