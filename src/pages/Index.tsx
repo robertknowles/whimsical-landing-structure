@@ -35,7 +35,7 @@ const Index = () => {
       <Footer />
       
       {showScroll && (
-        <div className="fixed left-1/2 bottom-4 -translate-x-1/2 animate-bounce text-white/90 hover:text-white transition-colors">
+        <div className="fixed left-[40%] bottom-4 -translate-x-1/2 animate-bounce text-white/90 hover:text-white transition-colors">
           <ChevronDown size={36} strokeWidth={2.5} />
         </div>
       )}
