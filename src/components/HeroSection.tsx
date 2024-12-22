@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, X, Bookmark, StickyNote, FolderTree } from "lucide-react";
+import { Chrome, X, Bookmark, StickyNote, FolderTree, Navigation } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -24,6 +24,11 @@ const HeroSection = () => {
       title: "Stay Organized",
       description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
     },
+    {
+      icon: Navigation,
+      title: "Message Navigation",
+      description: "Click to return to specific messages from previous conversations.",
+    }
   ];
 
   return (
@@ -55,7 +60,7 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
