@@ -60,7 +60,7 @@ const HeroSection = () => {
         {/* Benefits Grid */}
         <motion.div
           variants={fadeUpVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           {benefits.map((benefit, index) => (
             <motion.div
