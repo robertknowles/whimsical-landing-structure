@@ -27,7 +27,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <NavigationMenu />
       <HeroSection />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 -mt-24">
         <FeatureSection />
       </div>
       <PricingSection />
