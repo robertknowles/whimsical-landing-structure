@@ -19,7 +19,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       {/* Menu Bar */}
-      <Menubar className="fixed top-0 left-0 right-0 z-50 flex justify-center gap-4 glass border-none">
+      <Menubar className="fixed top-0 left-0 right-0 z-50 flex justify-center gap-4 bg-background border-none">
         <MenubarMenu>
           <MenubarTrigger className="cursor-pointer">
             <Grid className="mr-2 h-4 w-4 text-emerald-500" />
@@ -49,7 +49,6 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Features Section */}
       <div className="container mx-auto px-4">
         <FeatureSection />
       </div>
