@@ -50,7 +50,7 @@ const HeroSection = () => {
         variants={{
           visible: { transition: { staggerChildren: 0.1 } },
         }}
-        className="max-w-6xl mx-auto text-center"
+        className="max-w-[1600px] mx-auto text-center"
       >
         <motion.h1
           variants={{
@@ -79,7 +79,7 @@ const HeroSection = () => {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 w-full"
+          className="grid grid-cols-5 gap-4 mb-12 w-full"
         >
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
