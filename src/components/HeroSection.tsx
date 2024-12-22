@@ -38,9 +38,11 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
-          • Bookmark or highlight specific messages<br />
-          • Add contextual sticky notes<br />
-          • Organise individual messages into folders
+          Transform endless ChatGPT conversations into organized, actionable insights by:
+          <br />
+          • Saving key moments: Bookmark entire messages or highlight specific sentences with precision<br />
+          • Adding context: Use sticky notes to annotate your chats with reminders or insights<br />
+          • Staying organised: Group saved messages and sticky notes into an intuitive folder structure for easy access
         </motion.p>
         
         <motion.div
