@@ -14,7 +14,7 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Save Specific Messages",
-    description: "• Bookmark individual messages or key snippets.\n\n\n• Save only what matters, without the clutter of entire conversations.\n\n\n• Quickly access saved insights for reference.",
+    description: "- Bookmark individual messages or key snippets.\n\n- Save only what matters, without the clutter of entire conversations.\n\n- Quickly access saved insights for reference.",
     vimeoEmbed: true,
     vimeoId: "1041458304",
     align: "left"
