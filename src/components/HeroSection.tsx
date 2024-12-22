@@ -86,7 +86,7 @@ const HeroSection = () => {
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
               disabled
             >
-              <Chrome className="w-6 h-6 mr-2" />
+              <Chrome className="w-8 h-8 mr-2" />
               Add to Browser
             </Button>
             <motion.div
