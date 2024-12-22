@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Bookmark, StickyNote, FolderTree } from "lucide-react";
+import { Bookmark, StickyNote, FolderTree, Chrome } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
@@ -55,7 +55,7 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
         >
-          Transform endless ChatGPT conversations into organized, actionable insights
+          Transform endless ChatGPT conversations into clear, actionable insights
         </motion.p>
 
         {/* Benefits Grid */}
@@ -86,6 +86,7 @@ const HeroSection = () => {
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
               disabled
             >
+              <Chrome className="mr-2" />
               Add to Browser
             </Button>
             <motion.div
