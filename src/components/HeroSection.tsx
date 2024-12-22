@@ -29,7 +29,9 @@ const HeroSection = () => {
           variants={fadeUpVariants}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
-          A browser extension to <span className="text-emerald-500">save and organise specific messages</span> in ChatGPT
+          A browser extension to<br />
+          <span className="text-emerald-500">save and organise specific</span><br />
+          messages in ChatGPT
         </motion.h1>
         
         <motion.p
