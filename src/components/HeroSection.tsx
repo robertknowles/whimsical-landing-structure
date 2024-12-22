@@ -36,7 +36,7 @@ const HeroSection = () => {
         
         <motion.p
           variants={fadeUpVariants}
-          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
         >
           Transform endless ChatGPT conversations into organized, actionable insights by:
           <br />
