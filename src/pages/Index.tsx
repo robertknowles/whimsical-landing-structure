@@ -49,12 +49,7 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Features Section */}
-      <div className="container mx-auto px-4">
-        <FeatureSection />
-      </div>
-
-      {/* Features Grid */}
+      {/* Benefits Grid */}
       <section className="container mx-auto px-4 py-24">
         <motion.div
           initial="hidden"
@@ -78,6 +73,11 @@ const Index = () => {
           ))}
         </motion.div>
       </section>
+
+      {/* Features Section */}
+      <div className="container mx-auto px-4">
+        <FeatureSection />
+      </div>
 
       {/* Pricing Section */}
       <section className="container mx-auto px-4 py-24">
