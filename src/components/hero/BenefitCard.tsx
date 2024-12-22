@@ -16,7 +16,9 @@ const BenefitCard = ({ icon: Icon, title, description }: BenefitCardProps) => {
       }}
       className="glass-card hover-card"
     >
-      <Icon className="h-10 w-10 mb-4 text-primary" />
+      <div className="flex justify-center">
+        <Icon className="h-10 w-10 mb-4 text-primary" />
+      </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </motion.div>
