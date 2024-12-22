@@ -36,7 +36,8 @@ const features: Feature[] = [
   {
     title: "Analytics Dashboard",
     description: "Get insights into your team's performance with detailed analytics and reports.",
-    videoUrl: "/placeholder.mp4",
+    vimeoEmbed: true,
+    vimeoId: "1041464413",
     align: "right"
   }
 ];
