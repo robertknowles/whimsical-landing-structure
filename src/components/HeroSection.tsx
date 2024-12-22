@@ -12,17 +12,23 @@ const HeroSection = () => {
     {
       icon: Bookmark,
       title: "Save Key Snippets",
-      description: "Bookmark entire messages or use our highlighting tool to capture specific sentences with precision.",
+      description: (<>
+        <span className="text-emerald-500">Bookmark</span> entire messages or use our <span className="text-emerald-500">Highlighting Tool</span> to capture specific sentences with precision.
+      </>),
     },
     {
       icon: StickyNote,
       title: "Add Context",
-      description: "Pin sticky notes to messages to annotate them with reminders or insights.",
+      description: (<>
+        Pin <span className="text-emerald-500">Sticky Notes</span> to messages to annotate them with reminders or insights.
+      </>),
     },
     {
       icon: FolderTree,
       title: "Stay Organised",
-      description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
+      description: (<>
+        Group saved messages and sticky notes into an intuitive <span className="text-emerald-500">Folder Structure</span> for easy access.
+      </>),
     }
   ];
 
@@ -41,7 +47,7 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
           A browser extension<br />
-          to <span className="text-white">organize insights</span><br />
+          to <span>organise <span className="text-emerald-500">insights</span></span><br />
           in <span className="text-white">ChatGPT</span>
         </motion.h1>
         
