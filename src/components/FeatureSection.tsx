@@ -22,7 +22,8 @@ const features: Feature[] = [
   {
     title: "List View",
     description: "Browse your issues and group them by labels, assignees, milestones, and more.",
-    videoUrl: "/placeholder.mp4",
+    vimeoEmbed: true,
+    vimeoId: "1041460649",
     align: "right"
   },
   {
