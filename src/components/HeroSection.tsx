@@ -1,12 +1,30 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, X } from "lucide-react";
+import { Chrome, X, Bookmark, StickyNote, FolderTree } from "lucide-react";
 
 const HeroSection = () => {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const benefits = [
+    {
+      icon: Bookmark,
+      title: "Save Key Moments",
+      description: "Bookmark entire messages or highlight specific sentences with precision.",
+    },
+    {
+      icon: StickyNote,
+      title: "Add Context",
+      description: "Use sticky notes to annotate your chats with reminders or insights.",
+    },
+    {
+      icon: FolderTree,
+      title: "Stay Organized",
+      description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
+    },
+  ];
 
   return (
     <section className="container mx-auto px-4 pt-64 pb-64">
@@ -40,6 +58,24 @@ const HeroSection = () => {
         >
           Transform endless ChatGPT conversations into organized, actionable insights
         </motion.p>
+
+        {/* Benefits Grid */}
+        <motion.div
+          variants={fadeUpVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+        >
+          {benefits.map((benefit, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUpVariants}
+              className="glass-card hover-card"
+            >
+              <benefit.icon className="h-10 w-10 mb-4 text-primary" />
+              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+              <p className="text-muted-foreground">{benefit.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
         
         <motion.div
           variants={fadeUpVariants}

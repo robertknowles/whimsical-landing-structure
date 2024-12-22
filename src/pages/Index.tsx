@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Grid, DollarSign, HelpCircle, Download, Bookmark, StickyNote, FolderTree } from "lucide-react";
+import { Grid, DollarSign, HelpCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
@@ -48,31 +48,6 @@ const Index = () => {
 
       {/* Hero Section */}
       <HeroSection />
-
-      {/* Benefits Grid */}
-      <section className="container mx-auto px-4 py-24">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.1 } },
-          }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={index}
-              variants={fadeUpVariants}
-              className="glass-card hover-card"
-            >
-              <benefit.icon className="h-10 w-10 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-muted-foreground">{benefit.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
 
       {/* Features Section */}
       <div className="container mx-auto px-4">
@@ -148,23 +123,5 @@ const Index = () => {
     </div>
   );
 };
-
-const benefits = [
-  {
-    icon: Bookmark,
-    title: "Save Key Moments",
-    description: "Bookmark entire messages or highlight specific sentences with precision.",
-  },
-  {
-    icon: StickyNote,
-    title: "Add Context",
-    description: "Use sticky notes to annotate your chats with reminders or insights.",
-  },
-  {
-    icon: FolderTree,
-    title: "Stay Organized",
-    description: "Group saved messages and sticky notes into an intuitive folder structure for easy access.",
-  },
-];
 
 export default Index;
