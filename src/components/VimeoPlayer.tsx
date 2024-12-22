@@ -23,23 +23,32 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
     iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; clipboard-write');
     iframe.src = `https://player.vimeo.com/video/${videoId}?background=1&autopause=0&transparent=0&app_id=58479`;
     
+    containerRef.current.innerHTML = ''; // Clear any existing content
     containerRef.current.appendChild(iframe);
 
     // Initialize player with options
-    playerRef.current = new Player(iframe, {
+    const player = new Player(iframe, {
+      id: videoId,
       background: true,
       muted: true,
       controls: false,
+      autoplay: false,
     });
+
+    playerRef.current = player;
 
     // Set up Intersection Observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            playerRef.current?.play();
+            player.play().catch(error => {
+              console.warn('Autoplay failed:', error);
+            });
           } else {
-            playerRef.current?.pause();
+            player.pause().catch(error => {
+              console.warn('Pause failed:', error);
+            });
           }
         });
       },
@@ -55,12 +64,16 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
       }
-      playerRef.current?.destroy();
+      if (playerRef.current) {
+        playerRef.current.destroy().catch(error => {
+          console.warn('Player destruction failed:', error);
+        });
+      }
     };
   }, [videoId]);
 
   return (
-    <div ref={containerRef} style={{ padding: '55.33% 0 0 0', position: 'relative' }} />
+    <div ref={containerRef} style={{ padding: '56.25% 0 0 0', position: 'relative' }} />
   );
 };
 
