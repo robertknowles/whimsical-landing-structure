@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Bookmark, StickyNote, FolderTree, Chrome, MessageSquare, Highlighter, Navigation } from "lucide-react";
+import { MessageSquare, Highlighter, StickyNote, FolderTree, Navigation } from "lucide-react";
+import BenefitCard from "./hero/BenefitCard";
+import LaunchingSoonButton from "./hero/LaunchingSoonButton";
 
 const HeroSection = () => {
-  const fadeUpVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   const benefits = [
     {
       icon: MessageSquare,
@@ -57,7 +53,10 @@ const HeroSection = () => {
         className="max-w-4xl mx-auto text-center"
       >
         <motion.h1
-          variants={fadeUpVariants}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
           A browser extension<br />
@@ -66,7 +65,10 @@ const HeroSection = () => {
         </motion.h1>
         
         <motion.p
-          variants={fadeUpVariants}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
         >
           Transform endless ChatGPT conversations into clear, actionable insights
@@ -74,44 +76,25 @@ const HeroSection = () => {
 
         {/* Benefits Grid */}
         <motion.div
-          variants={fadeUpVariants}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12"
         >
           {benefits.map((benefit, index) => (
-            <motion.div
-              key={index}
-              variants={fadeUpVariants}
-              className="glass-card hover-card"
-            >
-              <benefit.icon className="h-10 w-10 mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-muted-foreground">{benefit.description}</p>
-            </motion.div>
+            <BenefitCard key={index} {...benefit} />
           ))}
         </motion.div>
         
         <motion.div
-          variants={fadeUpVariants}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           className="flex flex-wrap gap-4 justify-center relative"
         >
-          <div className="relative inline-block">
-            <Button
-              size="lg"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
-              disabled
-            >
-              <Chrome className="w-8 h-8 mr-2" />
-              Add to Browser
-            </Button>
-            <motion.div
-              initial={{ opacity: 0, rotate: -10, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-3 py-0.5 rounded-full text-white text-xs font-medium rotate-[-10deg] shadow-lg"
-            >
-              launching soon!
-            </motion.div>
-          </div>
+          <LaunchingSoonButton />
         </motion.div>
       </motion.div>
     </section>
