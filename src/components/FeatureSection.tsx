@@ -13,8 +13,8 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: "Board View",
-    description: "Manage your issues in a real-time automated kanban board with a drag and drop interface.",
+    title: "Save Specific Messages",
+    description: "• Bookmark individual messages or key snippets.\n• Save only what matters, without the clutter of entire conversations.\n• Quickly access saved insights for reference.",
     vimeoEmbed: true,
     vimeoId: "1041458304",
     align: "left"
