@@ -28,11 +28,11 @@ const Index = () => {
       <NavigationMenu />
       <HeroSection />
       {showScroll && (
-        <div className="container mx-auto px-4 flex justify-center -mt-32 mb-8">
+        <div className="container mx-auto px-4 flex justify-center -mt-24 mb-16">
           <ChevronDown size={36} strokeWidth={2.5} className="animate-bounce text-white/90 hover:text-white transition-colors" />
         </div>
       )}
-      <div className="container mx-auto px-4 -mt-24">
+      <div className="container mx-auto px-4 -mt-12">
         <FeatureSection />
       </div>
       <PricingSection />
