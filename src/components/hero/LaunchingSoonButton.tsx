@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome } from "lucide-react";
+import { Chrome, ChevronDown } from "lucide-react";
 
 const LaunchingSoonButton = () => {
   return (
@@ -20,6 +20,21 @@ const LaunchingSoonButton = () => {
         className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/10 backdrop-blur-sm px-3 py-0.5 rounded-full text-white text-xs font-medium rotate-[-10deg] shadow-lg"
       >
         launching soon!
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ 
+          opacity: 1,
+          y: [0, 10, 0]
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute -bottom-16 left-1/2 -translate-x-1/2"
+      >
+        <ChevronDown className="w-6 h-6 text-white" />
       </motion.div>
     </div>
   );
