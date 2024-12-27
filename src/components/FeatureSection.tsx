@@ -44,19 +44,7 @@ const features: Feature[] = [
 
 const FeatureSection = () => {
   return (
-    <section className="py-24">
-      {/* Header */}
-      <div className="text-center mb-24 space-y-4">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold tracking-tight"
-        >
-          Powerful Features
-        </motion.h2>
-      </div>
-
+    <section className="pt-0 pb-24">
       {/* Features */}
       <div className="space-y-32">
         {features.map((feature, index) => (
