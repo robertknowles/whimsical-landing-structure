@@ -72,14 +72,14 @@ const HeroSection = () => {
           className="flex flex-col items-center gap-8 mb-12"
         >
           {/* Top row - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl mx-auto">
             {benefits.slice(0, 3).map((benefit, index) => (
               <BenefitCard key={index} {...benefit} />
             ))}
           </div>
           
           {/* Bottom row - 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[665px] mx-auto">
             {benefits.slice(3, 5).map((benefit, index) => (
               <BenefitCard key={index} {...benefit} />
             ))}
