@@ -55,15 +55,6 @@ const FeatureSection = () => {
         >
           Powerful Features
         </motion.h2>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-xl text-muted-foreground max-w-3xl mx-auto"
-        >
-          Everything you need to manage your projects effectively, all in one place
-        </motion.p>
       </div>
 
       {/* Features */}
