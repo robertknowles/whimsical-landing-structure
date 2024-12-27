@@ -61,7 +61,7 @@ const FeatureSection = () => {
               feature.align === "right" ? "flex-row-reverse" : ""
             }`}>
               <div className="max-w-lg space-y-4">
-                <h3 className="text-3xl font-bold tracking-tight">{feature.title}</h3>
+                <h3 className="text-3xl font-bold tracking-tight whitespace-nowrap">{feature.title}</h3>
                 <p 
                   className="text-lg text-muted-foreground"
                   dangerouslySetInnerHTML={{ __html: feature.description }}
