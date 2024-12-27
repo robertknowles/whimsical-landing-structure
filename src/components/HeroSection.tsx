@@ -69,11 +69,21 @@ const HeroSection = () => {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="grid grid-cols-5 gap-4 mb-12 w-full"
+          className="flex flex-col items-center gap-8 mb-12"
         >
-          {benefits.map((benefit, index) => (
-            <BenefitCard key={index} {...benefit} />
-          ))}
+          {/* Top row - 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl mx-auto">
+            {benefits.slice(0, 3).map((benefit, index) => (
+              <BenefitCard key={index} {...benefit} />
+            ))}
+          </div>
+          
+          {/* Bottom row - 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
+            {benefits.slice(3, 5).map((benefit, index) => (
+              <BenefitCard key={index} {...benefit} />
+            ))}
+          </div>
         </motion.div>
         
         <motion.div
