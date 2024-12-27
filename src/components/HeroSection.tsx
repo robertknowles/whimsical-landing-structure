@@ -69,7 +69,7 @@ const HeroSection = () => {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="flex flex-col items-center gap-4 mb-12"
+          className="flex flex-col items-center gap-4 mb-8"
         >
           {/* Top row - 3 cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-[800px] mx-auto">
