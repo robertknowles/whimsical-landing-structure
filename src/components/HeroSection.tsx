@@ -49,9 +49,9 @@ const HeroSection = () => {
           }}
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
-          A browser extension<br />
-          to <span className="text-emerald-500">organise insights</span><br />
-          in <span className="text-white">ChatGPT</span>
+          Turn ChatGPT overload<br />
+          into <span className="text-emerald-500">organized</span>,<br />
+          <span className="text-white">actionable insights</span>
         </motion.h1>
         
         <motion.p
