@@ -50,7 +50,7 @@ const HeroSection = () => {
           className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
         >
           Turn ChatGPT overload into <br />
-          <span className="text-emerald-500">organized, actionable insights</span>
+          <span className="text-emerald-500">organised, actionable insights</span>
         </motion.h1>
         
         <motion.p
