@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import VimeoPlayer from "./VimeoPlayer";
+import { Plus, Minus } from "lucide-react";
 
 interface Feature {
   id: string;
@@ -65,14 +66,18 @@ const FeatureSection = () => {
         <Tabs defaultValue="bookmarking" className="w-full space-y-8">
           {/* Tab Navigation */}
           <div className="flex justify-center">
-            <TabsList className="h-auto flex-wrap gap-2 bg-background/5 p-2 md:flex-nowrap">
+            <TabsList className="w-full max-w-[90vw] mx-auto flex-wrap gap-2 bg-background/5 p-2 md:flex-nowrap">
               {features.map((feature) => (
                 <TabsTrigger
                   key={feature.id}
                   value={feature.id}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 text-sm md:text-base whitespace-normal text-center min-h-[44px]"
+                  className="group flex-1 flex items-center justify-between bg-gray-800/50 hover:bg-gray-800/70 data-[state=active]:bg-primary/90 data-[state=active]:text-primary-foreground px-6 py-3 text-sm md:text-base whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
                 >
-                  {feature.title}
+                  <span className="flex-grow text-left">{feature.title}</span>
+                  <span className="ml-2 opacity-70">
+                    <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
+                    <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
+                  </span>
                 </TabsTrigger>
               ))}
             </TabsList>
