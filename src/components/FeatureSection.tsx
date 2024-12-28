@@ -73,7 +73,7 @@ const FeatureSection = () => {
                   value={feature.id}
                   className="group flex-1 flex items-center justify-between bg-gray-800/50 hover:bg-gray-800/70 data-[state=active]:bg-primary/90 data-[state=active]:text-primary-foreground px-6 py-3 text-sm md:text-base whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
                 >
-                  <span className="flex-grow text-left">{feature.title}</span>
+                  <span className="flex-grow text-center font-semibold text-white/90">{feature.title}</span>
                   <span className="ml-2 opacity-70">
                     <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
                     <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
@@ -92,11 +92,6 @@ const FeatureSection = () => {
             >
               {/* Description Container */}
               <div className="max-w-2xl mx-auto px-6">
-                {/* Title */}
-                <h3 className="text-2xl font-bold mb-6 text-left text-primary">
-                  {feature.title}
-                </h3>
-                
                 {/* Description List */}
                 <ul className="space-y-4 text-left min-h-[120px] list-none">
                   {feature.description.map((point, index) => (
