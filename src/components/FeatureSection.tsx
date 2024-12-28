@@ -1,97 +1,89 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import VimeoPlayer from "./VimeoPlayer";
 
 interface Feature {
+  id: string;
   title: string;
   description: string;
-  videoUrl?: string;
-  vimeoEmbed?: boolean;
-  vimeoId?: string;
-  align: "left" | "right";
+  vimeoId: string;
 }
 
 const features: Feature[] = [
   {
-    title: "Message Bookmarking & Highlighting Tool",
-    description: "<ul class='space-y-2 list-disc pl-4'><li>Bookmark entire messages via the bookmarking icon.</li><li>Highlight specific sentences and save them directly to a folder using a popup.</li></ul>",
-    vimeoEmbed: true,
-    vimeoId: "1041458304",
-    align: "left"
+    id: "bookmarking",
+    title: "Message Bookmarking & Highlighting",
+    description: "Bookmark entire messages and highlight specific sentences to save directly to folders. Keep track of important information with our intuitive bookmarking system.",
+    vimeoId: "1041458304"
   },
   {
-    title: "Add Context with Sticky Notes",
-    description: "<ul class='space-y-2 list-disc pl-4'><li>Annotate saved messages with reminders or extra details.</li><li>Toggle Sticky Notes' visibility to maintain a clean workspace.</li></ul>",
-    vimeoEmbed: true,
-    vimeoId: "1041460649",
-    align: "right"
+    id: "sticky-notes",
+    title: "Sticky Notes",
+    description: "Add context to saved messages with customizable sticky notes. Toggle visibility to maintain a clean workspace while keeping your annotations handy.",
+    vimeoId: "1041460649"
   },
   {
-    title: "Organise with Folders",
-    description: "<ul class='space-y-2 list-disc pl-4'><li>Create folders to group messages and notes by topic.</li><li>Drag and drop saved items for seamless organization.</li></ul>",
-    vimeoEmbed: true,
-    vimeoId: "1041463171",
-    align: "left"
+    id: "folders",
+    title: "Folder Organization",
+    description: "Create and manage folders to group related messages and notes. Use our drag-and-drop interface for seamless organization of your saved content.",
+    vimeoId: "1041463171"
   },
   {
-    title: "Seamlessly Navigate Bookmarks and Sticky Notes",
-    description: "<ul class='space-y-2 list-disc pl-4'><li>Preview saved messages without losing your place.</li><li>Jump directly to the original chat location in one click.</li></ul>",
-    vimeoEmbed: true,
-    vimeoId: "1041464413",
-    align: "right"
+    id: "navigation",
+    title: "Smart Navigation",
+    description: "Preview saved messages instantly and jump to original chat locations with a single click. Navigate your bookmarks and notes effortlessly.",
+    vimeoId: "1041464413"
   }
 ];
 
 const FeatureSection = () => {
   return (
-    <section className="pt-0 pb-24">
-      {/* Features */}
-      <div className="space-y-32">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="flex flex-col gap-12"
-          >
-            {/* Content */}
-            <div className={`flex items-center max-w-7xl mx-auto w-full px-8 lg:px-12 ${
-              feature.align === "right" ? "flex-row-reverse" : ""
-            }`}>
-              <div className="max-w-lg space-y-4">
-                <h3 className="text-3xl font-bold tracking-tight break-words">{feature.title}</h3>
-                <p 
-                  className="text-lg text-muted-foreground"
-                  dangerouslySetInnerHTML={{ __html: feature.description }}
-                />
-              </div>
-              <div className="flex-1" />
-            </div>
+    <section className="py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto px-4"
+      >
+        <Tabs defaultValue="bookmarking" className="w-full space-y-8">
+          {/* Tab Navigation */}
+          <div className="flex justify-center">
+            <TabsList className="h-auto flex-wrap gap-2 bg-background/5 p-2 md:flex-nowrap">
+              {features.map((feature) => (
+                <TabsTrigger
+                  key={feature.id}
+                  value={feature.id}
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 text-sm md:text-base whitespace-normal text-center min-h-[44px]"
+                >
+                  {feature.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
-            {/* Video */}
-            <div className="w-full">
+          {/* Tab Content */}
+          {features.map((feature) => (
+            <TabsContent
+              key={feature.id}
+              value={feature.id}
+              className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
+            >
+              {/* Video Container */}
               <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
-                {feature.vimeoEmbed && feature.vimeoId ? (
-                  <VimeoPlayer videoId={feature.vimeoId} />
-                ) : (
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-[600px] object-cover"
-                  >
-                    <source src={feature.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                )}
+                <VimeoPlayer videoId={feature.vimeoId} />
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+
+              {/* Description */}
+              <div className="max-w-2xl mx-auto text-center">
+                <p className="text-lg text-muted-foreground">
+                  {feature.description}
+                </p>
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </motion.div>
     </section>
   );
 };
