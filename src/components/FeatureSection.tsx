@@ -20,8 +20,8 @@ const features: Feature[] = [
     align: "left"
   },
   {
-    title: "List View",
-    description: "Browse your issues and group them by labels, assignees, milestones, and more.",
+    title: "Add Context with Sticky Notes",
+    description: "<ul class='space-y-2 list-disc pl-4'><li>Annotate saved messages with reminders or extra details.</li><li>Toggle Sticky Notes' visibility to maintain a clean workspace.</li></ul>",
     vimeoEmbed: true,
     vimeoId: "1041460649",
     align: "right"
