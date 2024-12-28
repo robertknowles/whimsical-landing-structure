@@ -34,8 +34,8 @@ const features: Feature[] = [
     align: "left"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Get insights into your team's performance with detailed analytics and reports.",
+    title: "Seamlessly Navigate Bookmarks and Sticky Notes",
+    description: "<ul class='space-y-2 list-disc pl-4'><li>Preview saved messages without losing your place.</li><li>Jump directly to the original chat location in one click.</li></ul>",
     vimeoEmbed: true,
     vimeoId: "1041464413",
     align: "right"
