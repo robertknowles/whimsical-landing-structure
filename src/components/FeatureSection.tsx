@@ -57,16 +57,17 @@ const FeatureSection = () => {
             className="flex flex-col gap-12"
           >
             {/* Content */}
-            <div className={`flex items-center justify-between max-w-7xl mx-auto w-full px-8 lg:px-12 ${
+            <div className={`flex items-center max-w-7xl mx-auto w-full px-8 lg:px-12 ${
               feature.align === "right" ? "flex-row-reverse" : ""
             }`}>
               <div className="max-w-lg space-y-4">
-                <h3 className="text-3xl font-bold tracking-tight whitespace-nowrap">{feature.title}</h3>
+                <h3 className="text-3xl font-bold tracking-tight break-words">{feature.title}</h3>
                 <p 
                   className="text-lg text-muted-foreground"
                   dangerouslySetInnerHTML={{ __html: feature.description }}
                 />
               </div>
+              <div className="flex-1" />
             </div>
 
             {/* Video */}
