@@ -85,7 +85,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Description Container */}
-            <div className="lg:w-2/3">
+            <div className="lg:w-2/3 flex items-center">
               {features.map((feature) => (
                 <TabsContent
                   key={feature.id}
