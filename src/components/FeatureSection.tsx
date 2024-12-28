@@ -66,12 +66,12 @@ const FeatureSection = () => {
         <Tabs defaultValue="bookmarking" className="w-full space-y-8">
           {/* Tab Navigation */}
           <div className="flex justify-center">
-            <TabsList className="w-full max-w-[90vw] mx-auto flex-wrap gap-2 bg-background/5 p-2 md:flex-nowrap">
+            <TabsList className="w-full max-w-[90vw] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-background/5 p-2">
               {features.map((feature) => (
                 <TabsTrigger
                   key={feature.id}
                   value={feature.id}
-                  className="group flex-1 flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm md:text-base whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
+                  className="group flex-1 flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
                 >
                   <span className="flex-grow text-center font-semibold text-white/90">{feature.title}</span>
                   <span className="ml-2 opacity-70">
@@ -91,9 +91,9 @@ const FeatureSection = () => {
               className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
             >
               {/* Description Container */}
-              <div className="max-w-2xl mx-auto px-6">
+              <div className="max-w-[90vw] mx-auto px-0">
                 {/* Description List */}
-                <ul className="space-y-4 text-left min-h-[120px] list-none">
+                <ul className="space-y-4 text-left list-none">
                   {feature.description.map((point, index) => (
                     <li 
                       key={index} 
