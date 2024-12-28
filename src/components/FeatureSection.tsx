@@ -25,7 +25,7 @@ const features: Feature[] = [
     title: "Sticky Notes",
     description: [
       "Add context to saved messages with customizable sticky notes.",
-      "Toggle visibility to maintain a clean workspace while keeping your annotations handy.",
+      "Toggle sticky note visibility for a clean workspace.",
       "Organize and manage your thoughts efficiently."
     ],
     vimeoId: "1041460649"
