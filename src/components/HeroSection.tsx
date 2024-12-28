@@ -61,7 +61,7 @@ const HeroSection = () => {
           }}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
         >
-          Transform endless ChatGPT conversations into clear, actionable insights
+          A browser extension to save specific messages, highlight key moments, and organise ideas- in your endless chatGPT conversation
         </motion.p>
 
         <motion.div
