@@ -114,7 +114,7 @@ const FeatureSection = () => {
                 value={feature.id}
                 className="focus-visible:outline-none focus-visible:ring-0"
               >
-                <div className="rounded-xl glass-dark overflow-hidden max-w-4xl mx-auto">
+                <div className="rounded-xl glass-dark overflow-hidden w-full lg:w-2/3 mx-auto">
                   <VimeoPlayer videoId={feature.vimeoId} />
                 </div>
               </TabsContent>
