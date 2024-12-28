@@ -69,16 +69,16 @@ const FeatureSection = () => {
               value={feature.id}
               className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
             >
-              {/* Video Container */}
-              <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
-                <VimeoPlayer videoId={feature.vimeoId} />
-              </div>
-
-              {/* Description */}
-              <div className="max-w-2xl mx-auto text-center">
+              {/* Description - Moved above video */}
+              <div className="max-w-2xl mx-auto text-center mb-8">
                 <p className="text-lg text-muted-foreground">
                   {feature.description}
                 </p>
+              </div>
+
+              {/* Video Container */}
+              <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
+                <VimeoPlayer videoId={feature.vimeoId} />
               </div>
             </TabsContent>
           ))}
