@@ -64,38 +64,32 @@ const FeatureSection = () => {
         className="container mx-auto px-4"
       >
         <Tabs defaultValue="bookmarking" className="w-full">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Vertical Tabs Navigation - Converts to horizontal on mobile */}
-            <TabsList className="flex lg:flex-col gap-2 p-2 bg-background/5 rounded-lg lg:w-72 w-full overflow-x-auto lg:overflow-x-visible">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Vertical Tabs Navigation - Converts to horizontal on mobile */}
+              <TabsList className="flex lg:flex-col gap-2 p-2 bg-background/5 rounded-lg lg:w-72 w-full overflow-x-auto lg:overflow-x-visible">
+                {features.map((feature) => (
+                  <TabsTrigger
+                    key={feature.id}
+                    value={feature.id}
+                    className="group flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-4 text-sm whitespace-normal text-left w-full rounded-md transition-all duration-200"
+                  >
+                    <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
+                    <span className="ml-2 opacity-70 flex-shrink-0">
+                      <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
+                      <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
+                    </span>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+
+              {/* Description Container */}
               {features.map((feature) => (
-                <TabsTrigger
+                <TabsContent
                   key={feature.id}
                   value={feature.id}
-                  className="group flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-4 text-sm whitespace-normal text-left w-full rounded-md transition-all duration-200"
+                  className="flex-1 focus-visible:outline-none focus-visible:ring-0 min-w-0"
                 >
-                  <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
-                  <span className="ml-2 opacity-70 flex-shrink-0">
-                    <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
-                    <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
-                  </span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {/* Content Area */}
-            {features.map((feature) => (
-              <TabsContent
-                key={feature.id}
-                value={feature.id}
-                className="flex-1 space-y-8 focus-visible:outline-none focus-visible:ring-0 min-w-0"
-              >
-                <div className="grid lg:grid-cols-[2fr,1fr] gap-8">
-                  {/* Video Container */}
-                  <div className="rounded-xl glass-dark overflow-hidden">
-                    <VimeoPlayer videoId={feature.vimeoId} />
-                  </div>
-
-                  {/* Description Container */}
                   <div className="lg:pl-4">
                     <ul className="space-y-4 text-left list-none">
                       {feature.description.map((point, index) => (
@@ -109,6 +103,19 @@ const FeatureSection = () => {
                       ))}
                     </ul>
                   </div>
+                </TabsContent>
+              ))}
+            </div>
+
+            {/* Video Container - Now below tabs and descriptions */}
+            {features.map((feature) => (
+              <TabsContent
+                key={`video-${feature.id}`}
+                value={feature.id}
+                className="focus-visible:outline-none focus-visible:ring-0"
+              >
+                <div className="rounded-xl glass-dark overflow-hidden max-w-4xl mx-auto">
+                  <VimeoPlayer videoId={feature.vimeoId} />
                 </div>
               </TabsContent>
             ))}
