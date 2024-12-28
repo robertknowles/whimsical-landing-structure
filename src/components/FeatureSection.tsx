@@ -14,7 +14,7 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Message Bookmarking & Highlighting Tool",
-    description: "<ul class='space-y-2 list-disc pl-4'><li>Bookmark entire messages via the bookmarking icon</li><li>Or, highlight specific parts of sentences with our highlighter tool</li><li>Save highlighted snippets to a folder of your choice using a convenient popup</li></ul>",
+    description: "<ul class='space-y-2 list-disc pl-4'><li>Bookmark entire messages via the bookmarking icon.</li><li>Highlight specific sentences and save them directly to a folder using a popup.</li></ul>",
     vimeoEmbed: true,
     vimeoId: "1041458304",
     align: "left"
