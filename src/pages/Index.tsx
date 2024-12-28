@@ -26,18 +26,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <NavigationMenu />
-      <main className="pt-16"> {/* Add padding to account for sticky nav */}
-        <HeroSection />
-        {showScroll && (
-          <div className="container mx-auto px-4 flex justify-center -mt-24 mb-24">
-            <ChevronDown size={36} strokeWidth={2.5} className="animate-bounce text-white/90 hover:text-white transition-colors" />
-          </div>
-        )}
+      <HeroSection />
+      {showScroll && (
+        <div className="container mx-auto px-4 flex justify-center -mt-24 mb-24">
+          <ChevronDown size={36} strokeWidth={2.5} className="animate-bounce text-white/90 hover:text-white transition-colors" />
+        </div>
+      )}
+      <div className="container mx-auto px-4">
         <FeatureSection />
-        <PricingSection />
-        <FAQSection />
-        <Footer />
-      </main>
+      </div>
+      <PricingSection />
+      <FAQSection />
+      <Footer />
     </div>
   );
 };

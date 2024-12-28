@@ -53,13 +53,13 @@ const features: Feature[] = [
 
 const FeatureSection = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-24">
+    <section className="py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto space-y-24 md:space-y-32 lg:space-y-40 px-4"
+        className="container mx-auto space-y-32"
       >
         {features.map((feature, index) => (
           <motion.div
@@ -68,16 +68,16 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start"
+            className="flex flex-col lg:flex-row gap-12 items-center"
           >
             {/* Text Content */}
-            <div className="w-full lg:w-1/3 text-left space-y-4 md:space-y-6 lg:sticky lg:top-24">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient">{feature.title}</h3>
-              <ul className="space-y-3 md:space-y-4 list-none">
+            <div className="lg:w-1/3 text-left space-y-6">
+              <h3 className="text-2xl font-bold text-gradient">{feature.title}</h3>
+              <ul className="space-y-4 list-none">
                 {feature.description.map((point, index) => (
                   <li 
                     key={index} 
-                    className="flex items-start text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed pl-4 relative"
+                    className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
                   >
                     <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
                     {point}
@@ -87,7 +87,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Video Container */}
-            <div className="w-full lg:w-2/3">
+            <div className="lg:w-2/3">
               <div className="glass-dark rounded-xl overflow-hidden">
                 <VimeoPlayer videoId={feature.vimeoId} />
               </div>
