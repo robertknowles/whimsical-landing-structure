@@ -60,7 +60,7 @@ const HeroSection = () => {
           }}
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
         >
-          A browser extension to <span className="bg-emerald-400/30 px-1">save specific messages</span>, <span className="bg-emerald-400/30 px-1">highlight key moments</span>, and <span className="bg-emerald-400/30 px-1">organise ideas</span>- in your endless chatGPT conversation
+          A browser extension to <span className="half-highlight">save specific messages</span>, <span className="half-highlight">highlight key moments</span>, and <span className="half-highlight">organise ideas</span>- in your endless chatGPT conversation
         </motion.p>
 
         <motion.div

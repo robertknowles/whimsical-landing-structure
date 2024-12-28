@@ -58,3 +58,8 @@
 .hover-card {
   @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
 }
+
+.half-highlight {
+  background: linear-gradient(180deg, transparent 55%, rgba(52, 211, 153, 0.3) 45%);
+  display: inline;
+}
