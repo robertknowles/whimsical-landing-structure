@@ -27,8 +27,8 @@ const features: Feature[] = [
     align: "right"
   },
   {
-    title: "Timeline View",
-    description: "Plan your issues by scheduling milestones and see the progress in a timeline.",
+    title: "Organise with Folders",
+    description: "<ul class='space-y-2 list-disc pl-4'><li>Create folders to group messages and notes by topic.</li><li>Drag and drop saved items for seamless organization.</li></ul>",
     vimeoEmbed: true,
     vimeoId: "1041463171",
     align: "left"
