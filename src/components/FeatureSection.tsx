@@ -85,11 +85,21 @@ const FeatureSection = () => {
               value={feature.id}
               className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
             >
-              {/* Description - Above video */}
-              <div className="max-w-2xl mx-auto">
-                <ul className="space-y-3 list-disc pl-6 text-lg text-muted-foreground min-h-[120px] flex flex-col justify-center">
+              {/* Description Container */}
+              <div className="max-w-2xl mx-auto px-6">
+                {/* Title */}
+                <h3 className="text-2xl font-bold mb-6 text-left text-primary">
+                  {feature.title}
+                </h3>
+                
+                {/* Description List */}
+                <ul className="space-y-4 text-left min-h-[120px] list-none">
                   {feature.description.map((point, index) => (
-                    <li key={index} className="leading-relaxed">
+                    <li 
+                      key={index} 
+                      className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
+                    >
+                      <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
                       {point}
                     </li>
                   ))}
