@@ -72,7 +72,7 @@ const FeatureSection = () => {
                   <TabsTrigger
                     key={feature.id}
                     value={feature.id}
-                    className="group w-full h-[72px] flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm whitespace-normal text-left rounded-md transition-all duration-200"
+                    className="group w-full h-[32px] flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-2 text-sm whitespace-normal text-left rounded-md transition-all duration-200"
                   >
                     <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
                     <span className="ml-2 opacity-70">
