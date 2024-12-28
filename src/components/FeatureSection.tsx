@@ -25,7 +25,8 @@ const features: Feature[] = [
     title: "Sticky Notes",
     description: [
       "Add context to saved messages with customizable sticky notes.",
-      "Toggle visibility to maintain a clean workspace while keeping your annotations handy."
+      "Toggle visibility to maintain a clean workspace while keeping your annotations handy.",
+      "Organize and manage your thoughts efficiently."
     ],
     vimeoId: "1041460649"
   },
@@ -34,7 +35,8 @@ const features: Feature[] = [
     title: "Folder Organization",
     description: [
       "Create and manage folders to group related messages and notes.",
-      "Use our drag-and-drop interface for seamless organization of your saved content."
+      "Use our drag-and-drop interface for seamless organization.",
+      "Keep your content structured and easily accessible."
     ],
     vimeoId: "1041463171"
   },
@@ -42,8 +44,8 @@ const features: Feature[] = [
     id: "navigation",
     title: "Smart Navigation",
     description: [
-      "Preview saved messages instantly.",
-      "Jump to original chat locations with a single click.",
+      "Preview saved messages instantly with a single click.",
+      "Jump to original chat locations seamlessly.",
       "Navigate your bookmarks and notes effortlessly."
     ],
     vimeoId: "1041464413"
@@ -84,10 +86,12 @@ const FeatureSection = () => {
               className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
             >
               {/* Description - Above video */}
-              <div className="max-w-2xl mx-auto text-center mb-8">
-                <ul className="space-y-2 list-disc text-left inline-block text-lg text-muted-foreground">
+              <div className="max-w-2xl mx-auto">
+                <ul className="space-y-3 list-disc pl-6 text-lg text-muted-foreground min-h-[120px] flex flex-col justify-center">
                   {feature.description.map((point, index) => (
-                    <li key={index}>{point}</li>
+                    <li key={index} className="leading-relaxed">
+                      {point}
+                    </li>
                   ))}
                 </ul>
               </div>
