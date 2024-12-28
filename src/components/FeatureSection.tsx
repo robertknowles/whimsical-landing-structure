@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import VimeoPlayer from "./VimeoPlayer";
-import { Plus, Minus } from "lucide-react";
 
 interface Feature {
   id: string;
@@ -61,66 +59,41 @@ const FeatureSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto"
+        className="container mx-auto space-y-32"
       >
-        <Tabs defaultValue="bookmarking" className="w-full space-y-8">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Tabs Navigation */}
-            <div className="lg:w-1/3">
-              <TabsList className="flex flex-col w-full bg-background/5 p-2 h-auto gap-2">
-                {features.map((feature) => (
-                  <TabsTrigger
-                    key={feature.id}
-                    value={feature.id}
-                    className="group w-full h-[32px] flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-2 text-sm whitespace-normal text-left rounded-md transition-all duration-200"
+        {features.map((feature, index) => (
+          <motion.div
+            key={feature.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="flex flex-col lg:flex-row gap-12 items-center"
+          >
+            {/* Text Content */}
+            <div className="lg:w-1/3 text-left space-y-6">
+              <h3 className="text-2xl font-bold text-gradient">{feature.title}</h3>
+              <ul className="space-y-4 list-none">
+                {feature.description.map((point, index) => (
+                  <li 
+                    key={index} 
+                    className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
                   >
-                    <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
-                    <span className="ml-2 opacity-70">
-                      <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
-                      <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
-                    </span>
-                  </TabsTrigger>
+                    <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
+                    {point}
+                  </li>
                 ))}
-              </TabsList>
+              </ul>
             </div>
 
-            {/* Description Container */}
-            <div className="lg:w-2/3 flex items-center">
-              {features.map((feature) => (
-                <TabsContent
-                  key={feature.id}
-                  value={feature.id}
-                  className="mt-0 focus-visible:outline-none focus-visible:ring-0"
-                >
-                  <ul className="space-y-4 text-left list-none">
-                    {feature.description.map((point, index) => (
-                      <li 
-                        key={index} 
-                        className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
-                      >
-                        <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </TabsContent>
-              ))}
-            </div>
-          </div>
-
-          {/* Video Container */}
-          {features.map((feature) => (
-            <TabsContent
-              key={feature.id}
-              value={feature.id}
-              className="mt-0 focus-visible:outline-none focus-visible:ring-0"
-            >
-              <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
+            {/* Video Container */}
+            <div className="lg:w-2/3">
+              <div className="glass-dark rounded-xl overflow-hidden">
                 <VimeoPlayer videoId={feature.vimeoId} />
               </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );
