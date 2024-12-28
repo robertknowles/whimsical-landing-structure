@@ -5,7 +5,7 @@ import VimeoPlayer from "./VimeoPlayer";
 interface Feature {
   id: string;
   title: string;
-  description: string;
+  description: string[];
   vimeoId: string;
 }
 
@@ -13,25 +13,39 @@ const features: Feature[] = [
   {
     id: "bookmarking",
     title: "Message Bookmarking & Highlighting",
-    description: "Bookmark entire messages and highlight specific sentences to save directly to folders. Keep track of important information with our intuitive bookmarking system.",
+    description: [
+      "Bookmark entire messages and save directly to folders.",
+      "Highlight specific sentences for quick reference.",
+      "Keep track of important information with our intuitive bookmarking system."
+    ],
     vimeoId: "1041458304"
   },
   {
     id: "sticky-notes",
     title: "Sticky Notes",
-    description: "Add context to saved messages with customizable sticky notes. Toggle visibility to maintain a clean workspace while keeping your annotations handy.",
+    description: [
+      "Add context to saved messages with customizable sticky notes.",
+      "Toggle visibility to maintain a clean workspace while keeping your annotations handy."
+    ],
     vimeoId: "1041460649"
   },
   {
     id: "folders",
     title: "Folder Organization",
-    description: "Create and manage folders to group related messages and notes. Use our drag-and-drop interface for seamless organization of your saved content.",
+    description: [
+      "Create and manage folders to group related messages and notes.",
+      "Use our drag-and-drop interface for seamless organization of your saved content."
+    ],
     vimeoId: "1041463171"
   },
   {
     id: "navigation",
     title: "Smart Navigation",
-    description: "Preview saved messages instantly and jump to original chat locations with a single click. Navigate your bookmarks and notes effortlessly.",
+    description: [
+      "Preview saved messages instantly.",
+      "Jump to original chat locations with a single click.",
+      "Navigate your bookmarks and notes effortlessly."
+    ],
     vimeoId: "1041464413"
   }
 ];
@@ -69,11 +83,13 @@ const FeatureSection = () => {
               value={feature.id}
               className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
             >
-              {/* Description - Moved above video */}
+              {/* Description - Above video */}
               <div className="max-w-2xl mx-auto text-center mb-8">
-                <p className="text-lg text-muted-foreground">
-                  {feature.description}
-                </p>
+                <ul className="space-y-2 list-disc text-left inline-block text-lg text-muted-foreground">
+                  {feature.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
               </div>
 
               {/* Video Container */}
