@@ -64,49 +64,57 @@ const FeatureSection = () => {
         className="container mx-auto px-4"
       >
         <Tabs defaultValue="bookmarking" className="w-full space-y-8">
-          {/* Tab Navigation */}
-          <div className="flex justify-center">
-            <TabsList className="w-full max-w-[90vw] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-background/5 p-2">
+          <div className="flex flex-col lg:flex-row gap-8 mb-8">
+            {/* Tabs Navigation */}
+            <div className="lg:w-1/3">
+              <TabsList className="flex flex-col w-full bg-background/5 p-2 h-auto gap-2">
+                {features.map((feature) => (
+                  <TabsTrigger
+                    key={feature.id}
+                    value={feature.id}
+                    className="group flex-1 flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm whitespace-normal text-left min-h-[60px] rounded-md transition-all duration-200"
+                  >
+                    <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
+                    <span className="ml-2 opacity-70">
+                      <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
+                      <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
+                    </span>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+
+            {/* Description Container */}
+            <div className="lg:w-2/3">
               {features.map((feature) => (
-                <TabsTrigger
+                <TabsContent
                   key={feature.id}
                   value={feature.id}
-                  className="group flex-1 flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
+                  className="mt-0 focus-visible:outline-none focus-visible:ring-0"
                 >
-                  <span className="flex-grow text-center font-semibold text-white/90">{feature.title}</span>
-                  <span className="ml-2 opacity-70">
-                    <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
-                    <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
-                  </span>
-                </TabsTrigger>
+                  <ul className="space-y-4 text-left list-none">
+                    {feature.description.map((point, index) => (
+                      <li 
+                        key={index} 
+                        className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
+                      >
+                        <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </TabsContent>
               ))}
-            </TabsList>
+            </div>
           </div>
 
-          {/* Tab Content */}
+          {/* Video Container */}
           {features.map((feature) => (
             <TabsContent
               key={feature.id}
               value={feature.id}
-              className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
+              className="mt-0 focus-visible:outline-none focus-visible:ring-0"
             >
-              {/* Description Container */}
-              <div className="max-w-[90vw] mx-auto px-0">
-                {/* Description List */}
-                <ul className="space-y-4 text-left list-none">
-                  {feature.description.map((point, index) => (
-                    <li 
-                      key={index} 
-                      className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
-                    >
-                      <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Video Container */}
               <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
                 <VimeoPlayer videoId={feature.vimeoId} />
               </div>
