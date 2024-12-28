@@ -61,10 +61,10 @@ const FeatureSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto px-4"
+        className="container mx-auto"
       >
         <Tabs defaultValue="bookmarking" className="w-full space-y-8">
-          <div className="flex flex-col lg:flex-row gap-8 mb-8">
+          <div className="flex flex-col lg:flex-row gap-8">
             {/* Tabs Navigation */}
             <div className="lg:w-1/3">
               <TabsList className="flex flex-col w-full bg-background/5 p-2 h-auto gap-2">
