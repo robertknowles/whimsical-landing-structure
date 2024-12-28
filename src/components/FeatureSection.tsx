@@ -63,63 +63,55 @@ const FeatureSection = () => {
         transition={{ duration: 0.5 }}
         className="container mx-auto px-4"
       >
-        <Tabs defaultValue="bookmarking" className="w-full">
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col lg:flex-row gap-8">
-              {/* Vertical Tabs Navigation - Converts to horizontal on mobile */}
-              <TabsList className="flex lg:flex-col gap-2 p-2 bg-background/5 rounded-lg lg:w-72 w-full overflow-x-auto lg:overflow-x-visible">
-                {features.map((feature) => (
-                  <TabsTrigger
-                    key={feature.id}
-                    value={feature.id}
-                    className="group flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-4 text-sm whitespace-normal text-left w-full rounded-md transition-all duration-200"
-                  >
-                    <span className="flex-grow font-semibold text-white/90">{feature.title}</span>
-                    <span className="ml-2 opacity-70 flex-shrink-0">
-                      <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
-                      <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
-                    </span>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-
-              {/* Description Container */}
+        <Tabs defaultValue="bookmarking" className="w-full space-y-8">
+          {/* Tab Navigation */}
+          <div className="flex justify-center">
+            <TabsList className="w-full max-w-[90vw] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-background/5 p-2">
               {features.map((feature) => (
-                <TabsContent
+                <TabsTrigger
                   key={feature.id}
                   value={feature.id}
-                  className="flex-1 focus-visible:outline-none focus-visible:ring-0 min-w-0"
+                  className="group flex-1 flex items-center justify-between glass hover:bg-white/20 data-[state=active]:bg-white/20 px-6 py-3 text-sm whitespace-normal text-center min-h-[44px] rounded-md transition-all duration-200"
                 >
-                  <div className="lg:pl-4">
-                    <ul className="space-y-4 text-left list-none">
-                      {feature.description.map((point, index) => (
-                        <li 
-                          key={index} 
-                          className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
-                        >
-                          <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </TabsContent>
+                  <span className="flex-grow text-center font-semibold text-white/90">{feature.title}</span>
+                  <span className="ml-2 opacity-70">
+                    <Plus className="h-4 w-4 group-data-[state=inactive]:block group-data-[state=active]:hidden" />
+                    <Minus className="h-4 w-4 group-data-[state=inactive]:hidden group-data-[state=active]:block" />
+                  </span>
+                </TabsTrigger>
               ))}
-            </div>
-
-            {/* Video Container - Now below tabs and descriptions */}
-            {features.map((feature) => (
-              <TabsContent
-                key={`video-${feature.id}`}
-                value={feature.id}
-                className="focus-visible:outline-none focus-visible:ring-0"
-              >
-                <div className="rounded-xl glass-dark overflow-hidden w-full lg:w-2/3 mx-auto">
-                  <VimeoPlayer videoId={feature.vimeoId} />
-                </div>
-              </TabsContent>
-            ))}
+            </TabsList>
           </div>
+
+          {/* Tab Content */}
+          {features.map((feature) => (
+            <TabsContent
+              key={feature.id}
+              value={feature.id}
+              className="space-y-8 focus-visible:outline-none focus-visible:ring-0"
+            >
+              {/* Description Container */}
+              <div className="max-w-[90vw] mx-auto px-0">
+                {/* Description List */}
+                <ul className="space-y-4 text-left list-none">
+                  {feature.description.map((point, index) => (
+                    <li 
+                      key={index} 
+                      className="flex items-start text-muted-foreground text-base leading-relaxed pl-4 relative"
+                    >
+                      <span className="absolute left-0 top-[0.6em] w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Video Container */}
+              <div className="max-w-[90vw] mx-auto rounded-xl glass-dark overflow-hidden">
+                <VimeoPlayer videoId={feature.vimeoId} />
+              </div>
+            </TabsContent>
+          ))}
         </Tabs>
       </motion.div>
     </section>
