@@ -10,7 +10,7 @@ const HeroTitle = () => {
       className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
     >
       Turn ChatGPT message overload <br />
-      into <span className="text-emerald-500">organised, actionable insights</span>
+      into <span style={{ color: 'rgb(196,250,228)' }}>organised, actionable insights</span>
     </motion.h1>
   );
 };

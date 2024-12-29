@@ -60,6 +60,6 @@
 }
 
 .half-highlight {
-  background: linear-gradient(180deg, transparent 55%, rgba(52, 211, 153, 0.3) 45%);
+  background: linear-gradient(180deg, transparent 55%, rgba(196, 250, 228, 0.3) 45%);
   display: inline;
 }
