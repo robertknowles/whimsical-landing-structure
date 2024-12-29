@@ -6,7 +6,7 @@ import LaunchingSoonButton from "./hero/LaunchingSoonButton";
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 pt-24 pb-48">
+    <section className="h-screen flex items-center justify-center px-4">
       <motion.div
         initial="hidden"
         animate="visible"
