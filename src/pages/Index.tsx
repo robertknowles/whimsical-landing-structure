@@ -26,8 +26,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <NavigationMenu />
-      <div className="snap-y snap-mandatory h-screen overflow-y-auto">
-        <div className="snap-start h-screen relative">
+      <div className="relative">
+        <div className="h-screen snap-start">
           <HeroSection />
           <AnimatePresence>
             {showScroll && (

@@ -65,17 +65,24 @@
   display: inline;
 }
 
-/* Smooth scrolling for non-snap sections */
+/* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
-/* Hide scrollbar but keep functionality */
-.snap-y::-webkit-scrollbar {
-  display: none;
+body {
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.snap-y {
-  -ms-overflow-style: none;
+/* Optional: Hide scrollbar while keeping functionality */
+.hide-scrollbar {
   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
