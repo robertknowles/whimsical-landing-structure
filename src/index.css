@@ -34,8 +34,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 }
 
@@ -62,4 +63,19 @@
 .half-highlight {
   background: linear-gradient(180deg, transparent 55%, rgba(52, 211, 153, 0.3) 45%);
   display: inline;
+}
+
+/* Smooth scrolling for non-snap sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-y {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
