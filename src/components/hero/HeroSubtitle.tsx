@@ -13,7 +13,7 @@ const HeroSubtitle = () => {
         Don't let ideas get buried—bookmark, organise, and retrieve effortlessly.
       </span>
 
-      <p>
+      <p className="mt-4">
         ChatGPT generates more insights than ever, but keeping track is overwhelming. Ideas get buried, context gets lost, and conversations become chaotic. With our browser extension, you can save key messages, highlight important snippets, and stay organised for seamless productivity.
       </p>
     </motion.div>
