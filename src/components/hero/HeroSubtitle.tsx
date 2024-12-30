@@ -9,9 +9,9 @@ const HeroSubtitle = () => {
       }}
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto flex flex-col gap-2"
     >
-      <span>Effortlessly <span className="half-highlight">Bookmark</span> ChatGPT's best ideas</span>
-      <span>Pin <span className="half-highlight">Sticky Notes</span> to capture and organise your thoughts</span>
-      <span>Use <span className="half-highlight">Folders</span> for seamless organisation and productivity</span>
+      <span>Chat GPT is generating more insights than ever- but keeping track of them is overwhelming</span>
+      <span>Important ideas get buried, context gets lost and conversations become chaotic</span>
+      <span><span className="half-highlight">Bookmark</span>, <span className="half-highlight">organise</span> and <span className="half-highlight">retrieve</span> your key insights effortlessly with our browser extension</span>
     </motion.p>
   );
 };
