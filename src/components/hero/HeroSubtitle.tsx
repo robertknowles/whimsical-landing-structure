@@ -9,9 +9,12 @@ const HeroSubtitle = () => {
       }}
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
     >
-      ChatGPT is generating more insights than ever- but keeping track is overwhelming. Important ideas get buried, context is lost, and conversations become chaotic.
-      <br />
-      Don't miss your best ideas- <span className="half-highlight">bookmark</span>, <span className="half-highlight">organise</span>, and <span className="half-highlight">retrieve</span> them effortlessly with our browser extension.
+      <span className="font-bold block mb-4">
+        <span className="half-highlight">
+          Don't let ideas get buried—bookmark, organise, and retrieve effortlessly.
+        </span>
+      </span>
+      ChatGPT generates more insights than ever, but keeping track is overwhelming. Ideas get buried, context gets lost, and conversations become chaotic. With our browser extension, you can save key messages, highlight important snippets, and stay organised for seamless productivity.
     </motion.p>
   );
 };
