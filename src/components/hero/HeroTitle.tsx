@@ -10,7 +10,7 @@ const HeroTitle = () => {
       className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
     >
       Organise ChatGPT into <br />
-      <span className="text-emerald-500">Actionable Insights</span>
+      <span className="text-emerald-500">actionable insights</span>
     </motion.h1>
   );
 };
