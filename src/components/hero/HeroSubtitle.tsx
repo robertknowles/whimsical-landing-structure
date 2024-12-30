@@ -9,7 +9,7 @@ const HeroSubtitle = () => {
       }}
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
     >
-      ChatGPT is generating more insights than ever- but keeping track is overwhelming. Important ideas get buried, context is lost, and conversations become chaotic.
+      <span className="font-bold" style={{ color: '#FFC107' }}>ChatGPT generates more insights than ever, but ideas get buried, context gets lost, and conversations become chaotic.</span>
       <br />
       Don't miss your best ideas- <span className="half-highlight">bookmark</span>, <span className="half-highlight">organise</span>, and <span className="half-highlight">retrieve</span> them effortlessly with our browser extension.
     </motion.p>
