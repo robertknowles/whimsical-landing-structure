@@ -64,7 +64,7 @@ const FeatureSection = () => {
           Powerful Features
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Feature Cards */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

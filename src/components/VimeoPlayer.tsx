@@ -12,7 +12,6 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Initialize Vimeo player with specific options
     playerRef.current = new Player(containerRef.current, {
       id: videoId,
       background: true,
@@ -24,7 +23,6 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
       loop: true
     });
 
-    // Set up Intersection Observer for viewport-based playback
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -57,11 +55,11 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
   }, [videoId]);
 
   return (
-    <div className="relative w-full max-w-[800px] mx-auto">
-      <div className="aspect-video relative">
+    <div className="relative w-full max-w-[1200px] mx-auto h-[40vh] min-h-[300px] md:min-h-[400px]">
+      <div className="absolute inset-0">
         <div
           ref={containerRef}
-          className="absolute inset-0 w-full h-full"
+          className="w-full h-full rounded-xl overflow-hidden"
         />
       </div>
     </div>
