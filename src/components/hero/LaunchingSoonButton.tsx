@@ -4,10 +4,10 @@ import { Chrome } from "lucide-react";
 
 const LaunchingSoonButton = () => {
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block w-full max-w-md">
       <Button
         size="lg"
-        className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3"
+        className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 relative opacity-50 text-lg px-8 py-3 w-full"
         disabled
       >
         <Chrome className="w-8 h-8 mr-2" />
