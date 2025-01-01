@@ -102,9 +102,11 @@ const FeatureSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-dark rounded-xl overflow-hidden"
+            className="flex items-center justify-center w-full"
           >
-            <VimeoPlayer videoId={selectedFeature.vimeoId} />
+            <div className="w-full glass-dark rounded-xl overflow-hidden">
+              <VimeoPlayer videoId={selectedFeature.vimeoId} />
+            </div>
           </motion.div>
         </div>
       </div>
