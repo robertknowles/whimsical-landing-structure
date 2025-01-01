@@ -20,7 +20,8 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
       controls: false,
       playsinline: true,
       transparent: false,
-      loop: true
+      loop: true,
+      responsive: true
     });
 
     const observer = new IntersectionObserver(
@@ -59,7 +60,7 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
       <div className="absolute inset-0">
         <div
           ref={containerRef}
-          className="w-full h-full rounded-xl overflow-hidden"
+          className="w-full h-full rounded-xl overflow-hidden [&>div]:!w-full [&>div]:!h-full [&>iframe]:!w-full [&>iframe]:!h-full"
         />
       </div>
     </div>
