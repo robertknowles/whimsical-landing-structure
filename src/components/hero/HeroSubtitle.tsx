@@ -10,11 +10,11 @@ const HeroSubtitle = () => {
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
     >
       <span className="half-highlight">
-        Don't let ideas get buried—bookmark, organise, and retrieve effortlessly.
+        The only extension to bookmark specific messages, pin contextual notes and navigate effortlessly.
       </span>
 
-      <p className="mt-4">
-        ChatGPT generates more insights than ever, but keeping track is overwhelming. Ideas get buried, context gets lost, and conversations become chaotic. With our browser extension, you can save key messages, highlight important snippets, and stay organised for seamless productivity.
+      <p className="mt-8">
+        ChatGPT generates more insights than ever, but keeping track is overwhelming. Important ideas get buried, context is lost, and conversations turn chaotic. Unlike other tools that only save entire chat channels, our extension gives you precision and control.
       </p>
     </motion.div>
   );
