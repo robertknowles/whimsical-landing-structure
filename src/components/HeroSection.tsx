@@ -39,9 +39,9 @@ const HeroSection = () => {
             }}
             initial="hidden"
             animate="visible"
-            className="flex items-center justify-center w-full"
+            className="w-full flex items-center justify-center"
           >
-            <div className="w-full glass-dark rounded-xl overflow-hidden">
+            <div className="w-full">
               <VimeoPlayer videoId="1043309138" />
             </div>
           </motion.div>

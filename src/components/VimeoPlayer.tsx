@@ -15,8 +15,8 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
     // Initialize Vimeo player with specific options
     playerRef.current = new Player(containerRef.current, {
       id: videoId,
-      background: true, // Hides all controls
-      muted: true, // Ensures video is muted for autoplay
+      background: true,
+      muted: true,
       autopause: false,
       controls: false,
       playsinline: true,
@@ -39,14 +39,13 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 30% of the video is visible
+      { threshold: 0.3 }
     );
 
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
 
-    // Cleanup function
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
@@ -58,22 +57,11 @@ const VimeoPlayer = ({ videoId }: VimeoPlayerProps) => {
   }, [videoId]);
 
   return (
-    <div className="w-full max-w-[800px] mx-auto lg:max-w-[50%]">
-      <div
-        ref={containerRef}
-        style={{
-          padding: "56.25% 0 0 0", // 16:9 aspect ratio
-          position: "relative",
-        }}
-      >
+    <div className="relative w-full max-w-[800px] mx-auto">
+      <div className="aspect-video relative">
         <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}
+          ref={containerRef}
+          className="absolute inset-0 w-full h-full"
         />
       </div>
     </div>
