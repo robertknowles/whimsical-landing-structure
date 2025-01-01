@@ -9,7 +9,7 @@ const HeroSubtitle = () => {
       }}
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto"
     >
-      <div>
+      <div className="text-white">
         The only extension to <span className="half-highlight">bookmark specific messages</span>, <span className="half-highlight">pin contextual notes</span> and <span className="half-highlight">navigate effortlessly</span>.
       </div>
 
