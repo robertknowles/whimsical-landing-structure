@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
 import LaunchingSoonButton from "./hero/LaunchingSoonButton";
+import VimeoPlayer from "./VimeoPlayer";
 
 const HeroSection = () => {
   return (
@@ -40,10 +41,8 @@ const HeroSection = () => {
             animate="visible"
             className="w-full"
           >
-            <div className="glass-dark rounded-xl overflow-hidden aspect-video">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                Video Placeholder
-              </div>
+            <div className="glass-dark rounded-xl overflow-hidden">
+              <VimeoPlayer videoId="1043309138" />
             </div>
           </motion.div>
         </div>
