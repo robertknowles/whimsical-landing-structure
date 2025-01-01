@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
-import BenefitsGrid from "./hero/BenefitsGrid";
 import LaunchingSoonButton from "./hero/LaunchingSoonButton";
 
 const HeroSection = () => {
@@ -17,7 +16,22 @@ const HeroSection = () => {
       >
         <HeroTitle />
         <HeroSubtitle />
-        <BenefitsGrid />
+        
+        {/* Video Placeholder */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          className="max-w-4xl mx-auto my-16"
+        >
+          <div className="glass-dark rounded-xl overflow-hidden aspect-video">
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+              Video Placeholder
+            </div>
+          </div>
+        </motion.div>
+
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
