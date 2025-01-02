@@ -59,7 +59,7 @@ const FeatureSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-left mb-8"
+          className="text-4xl font-bold text-center mb-8"
         >
           Powerful Features
         </motion.h2>
