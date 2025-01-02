@@ -51,7 +51,7 @@ const HeroSection = () => {
 
       {/* Bouncing Arrow */}
       <motion.div 
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block"
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ 
           y: [0, 10, 0],
         }}
