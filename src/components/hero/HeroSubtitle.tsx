@@ -15,7 +15,6 @@ const HeroSubtitle = () => {
 
       <div className="mt-8">
         <p>Lost scrolling through endless ChatGPT messages? Struggling to stay on track and keep your train of thought?</p>
-        <p className="mt-4">ChatGPT is generating greater insights than ever. Struggling to stay organised means missing out on them. Unlike tools that only save entire chat channels, we go deeper- allowing users to save, organise, and retrieve specific ideas effortlessly.</p>
       </div>
     </motion.div>
   );

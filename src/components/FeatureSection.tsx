@@ -55,6 +55,15 @@ const FeatureSection = () => {
   return (
     <section className="py-24 bg-black/20">
       <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl mx-auto text-center"
+        >
+          <p>ChatGPT is generating greater insights than ever. Struggling to stay organised means missing out on them. Unlike tools that only save entire chat channels, we go deeper- allowing users to save, organise, and retrieve specific ideas effortlessly.</p>
+        </motion.div>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
