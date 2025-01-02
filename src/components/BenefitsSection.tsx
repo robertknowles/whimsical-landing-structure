@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 
 const BenefitsSection = () => {
   return (
-    <section className="py-24">
+    <section className="py-12 md:py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto"
         >
           {/* Competitor Card */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="glass-card bg-[#ea384c]/10 border-[#ea384c]/20"
           >
-            <h3 className="text-2xl font-bold mb-4 text-[#ea384c]">Other Tools</h3>
-            <ul className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#ea384c]">Other Tools</h3>
+            <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start">
                 <span className="mr-2">❌</span>
                 Save entire chat channels only
@@ -37,8 +37,8 @@ const BenefitsSection = () => {
             whileHover={{ scale: 1.02 }}
             className="glass-card bg-emerald-500/10 border-emerald-500/20"
           >
-            <h3 className="text-2xl font-bold mb-4 text-emerald-500">Our Extension</h3>
-            <ul className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-emerald-500">Our Extension</h3>
+            <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
                 Bookmark specific messages and highlights
