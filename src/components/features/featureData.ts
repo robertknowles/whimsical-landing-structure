@@ -45,7 +45,7 @@ export const features: Feature[] = [
       "Access your saved content in a streamlined, organized way."
     ],
     icon: FolderTree,
-    vimeoId: "1041464413" // (3) FolderOrganisation
+    vimeoId: "1041463171" // (3) FolderOrganisation
   },
   {
     id: "navigation",
