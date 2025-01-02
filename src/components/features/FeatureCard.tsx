@@ -33,7 +33,7 @@ const FeatureCard = ({
       <div className="flex items-start gap-4">
         <Icon className="w-6 h-6 mt-1 flex-shrink-0" />
         <div className="text-left flex-grow">
-          <h3 className="font-semibold mb-2">{title}</h3>
+          <h3 className="font-semibold mb-2 text-emerald-400">{title}</h3>
           <p className="text-sm text-muted-foreground mb-2">{description}</p>
           
           <AnimatePresence>
