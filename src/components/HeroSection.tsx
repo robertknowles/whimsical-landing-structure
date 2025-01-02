@@ -16,7 +16,7 @@ const HeroSection = () => {
             variants={{
               visible: { transition: { staggerChildren: 0.1 } },
             }}
-            className="text-left order-2 lg:order-1"
+            className="text-left order-1 lg:order-1"
           >
             <HeroTitle />
             <HeroSubtitle />
@@ -39,7 +39,7 @@ const HeroSection = () => {
             }}
             initial="hidden"
             animate="visible"
-            className="w-full flex items-center justify-center order-1 lg:order-2"
+            className="w-full flex items-center justify-center order-2 lg:order-2"
           >
             <div className="w-full">
               <VimeoPlayer videoId="1043309138" />

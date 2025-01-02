@@ -28,7 +28,7 @@ const FeatureSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-3 md:space-y-4 order-2 lg:order-1"
+            className="space-y-3 md:space-y-4 order-1"
           >
             {features.map((feature) => (
               <FeatureCard
@@ -41,7 +41,7 @@ const FeatureSection = () => {
           </motion.div>
 
           {/* Video Display */}
-          <div className="sticky top-24 order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="lg:sticky lg:top-24 order-2 mb-8 lg:mb-0">
             <FeatureVideo videoId={selectedFeature?.vimeoId || features[0].vimeoId} />
           </div>
         </div>
