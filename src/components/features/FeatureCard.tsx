@@ -16,7 +16,7 @@ const FeatureCard = ({
   id, 
   title, 
   description, 
-  expandedDetails,
+  expandedDetails = [], // Provide default empty array
   icon: Icon, 
   isSelected, 
   onClick 
@@ -37,7 +37,7 @@ const FeatureCard = ({
           <p className="text-sm text-muted-foreground mb-2">{description}</p>
           
           <AnimatePresence>
-            {isSelected && (
+            {isSelected && expandedDetails && expandedDetails.length > 0 && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
