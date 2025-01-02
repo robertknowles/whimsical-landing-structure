@@ -1,53 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import VimeoPlayer from "./VimeoPlayer";
-import { MessageSquare, Highlighter, StickyNote, FolderTree, Navigation } from "lucide-react";
-
-interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ElementType;
-  vimeoId: string;
-}
-
-const features: Feature[] = [
-  {
-    id: "bookmarking",
-    title: "Message Bookmarking",
-    description: "Bookmark entire messages and save directly to folders.",
-    icon: MessageSquare,
-    vimeoId: "1041458304"
-  },
-  {
-    id: "highlighting",
-    title: "Highlighting Tool",
-    description: "Highlight specific sentences for quick reference.",
-    icon: Highlighter,
-    vimeoId: "1041460649"
-  },
-  {
-    id: "sticky-notes",
-    title: "Sticky Notes",
-    description: "Add context to saved messages with customizable sticky notes.",
-    icon: StickyNote,
-    vimeoId: "1041463171"
-  },
-  {
-    id: "folders",
-    title: "Folder Organization",
-    description: "Create and manage folders to group related messages and notes.",
-    icon: FolderTree,
-    vimeoId: "1041464413"
-  },
-  {
-    id: "navigation",
-    title: "Smart Navigation",
-    description: "Preview saved messages instantly with a single click.",
-    icon: Navigation,
-    vimeoId: "1041464413"
-  }
-];
+import FeatureCard from "./features/FeatureCard";
+import FeatureVideo from "./features/FeatureVideo";
+import FeatureDescription from "./features/FeatureDescription";
+import { features } from "./features/featureData";
 
 const FeatureSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(features[0]);
@@ -64,14 +20,7 @@ const FeatureSection = () => {
           Powerful Features
         </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-lg md:text-xl text-muted-foreground mb-16 text-left"
-        >
-          <p>ChatGPT is generating greater insights than ever. Struggling to stay organised means missing out on them. Unlike tools that only save entire chat channels, we go deeper- allowing users to save, organise, and retrieve specific ideas effortlessly.</p>
-        </motion.div>
+        <FeatureDescription />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Feature Cards */}
@@ -81,42 +30,18 @@ const FeatureSection = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            {features.map((feature) => {
-              const Icon = feature.icon;
-              const isSelected = selectedFeature.id === feature.id;
-              
-              return (
-                <motion.div
-                  key={feature.id}
-                  className={`glass-card cursor-pointer transition-all duration-300 ${
-                    isSelected ? "bg-white/20" : ""
-                  }`}
-                  onClick={() => setSelectedFeature(feature)}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="flex items-center gap-4">
-                    <Icon className="w-6 h-6" />
-                    <div className="text-left">
-                      <h3 className="font-semibold">{feature.title}</h3>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.id}
+                {...feature}
+                isSelected={selectedFeature.id === feature.id}
+                onClick={() => setSelectedFeature(feature)}
+              />
+            ))}
           </motion.div>
 
           {/* Video Display */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="w-full flex items-center justify-center"
-          >
-            <div className="w-full">
-              <VimeoPlayer videoId={selectedFeature.vimeoId} />
-            </div>
-          </motion.div>
+          <FeatureVideo videoId={selectedFeature.vimeoId} />
         </div>
       </div>
     </section>
