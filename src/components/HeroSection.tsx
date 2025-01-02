@@ -6,7 +6,7 @@ import VimeoPlayer from "./VimeoPlayer";
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
+    <section className="container mx-auto px-4 pt-32 pb-32 md:pt-40 md:pb-48 lg:pt-48 lg:pb-64 min-h-screen">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
