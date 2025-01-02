@@ -21,7 +21,7 @@ export const features: Feature[] = [
       "Keep track of important information with our intuitive bookmarking system."
     ],
     icon: MessageSquare,
-    vimeoId: "1041458304"
+    vimeoId: "1041458304" // (1) SavingMessages
   },
   {
     id: "sticky-notes",
@@ -33,7 +33,7 @@ export const features: Feature[] = [
       "Organize and manage your thoughts efficiently."
     ],
     icon: StickyNote,
-    vimeoId: "1041463171"
+    vimeoId: "1041463171" // (2) CreatingStickyNote
   },
   {
     id: "folders",
@@ -45,7 +45,7 @@ export const features: Feature[] = [
       "Access your saved content in a streamlined, organized way."
     ],
     icon: FolderTree,
-    vimeoId: "1041464413"
+    vimeoId: "1041464413" // (3) FolderOrganisation
   },
   {
     id: "navigation",
@@ -57,6 +57,6 @@ export const features: Feature[] = [
       "Navigate your bookmarks and notes effortlessly"
     ],
     icon: Navigation,
-    vimeoId: "1041464413"
+    vimeoId: "1041464413" // (4) Navigation
   }
 ];
