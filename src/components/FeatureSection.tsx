@@ -6,7 +6,7 @@ import FeatureDescription from "./features/FeatureDescription";
 import { features } from "./features/featureData";
 
 const FeatureSection = () => {
-  const [selectedFeature, setSelectedFeature] = useState(features[0]);
+  const [selectedFeature, setSelectedFeature] = useState(null); // Changed from features[0] to null
 
   return (
     <section className="py-24 bg-black/20">
@@ -34,14 +34,14 @@ const FeatureSection = () => {
               <FeatureCard
                 key={feature.id}
                 {...feature}
-                isSelected={selectedFeature.id === feature.id}
-                onClick={() => setSelectedFeature(feature)}
+                isSelected={selectedFeature?.id === feature.id}
+                onClick={() => setSelectedFeature(selectedFeature?.id === feature.id ? null : feature)}
               />
             ))}
           </motion.div>
 
           {/* Video Display */}
-          <FeatureVideo videoId={selectedFeature.vimeoId} />
+          <FeatureVideo videoId={selectedFeature?.vimeoId || features[0].vimeoId} />
         </div>
       </div>
     </section>
