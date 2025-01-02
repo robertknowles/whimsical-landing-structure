@@ -33,7 +33,7 @@ export const features: Feature[] = [
       "Organize and manage your thoughts efficiently."
     ],
     icon: StickyNote,
-    vimeoId: "1041463171" // (2) CreatingStickyNote
+    vimeoId: "1041460649" // (2) CreatingStickyNote
   },
   {
     id: "folders",
