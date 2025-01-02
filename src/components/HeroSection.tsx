@@ -51,7 +51,7 @@ const HeroSection = () => {
 
       {/* Bouncing Arrow */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ 
           y: [0, 10, 0],
         }}
@@ -61,7 +61,7 @@ const HeroSection = () => {
           ease: "easeInOut"
         }}
       >
-        <ChevronDown className="w-8 h-8 text-white" />
+        <ChevronDown className="w-12 h-12 text-white" />
       </motion.div>
     </section>
   );
