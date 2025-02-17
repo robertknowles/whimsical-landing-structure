@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+
+import React from "react";
 import NavigationMenu from "@/components/NavigationMenu";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
