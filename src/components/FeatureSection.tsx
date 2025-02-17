@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import FeatureCard from "./features/FeatureCard";
 import FeatureVideo from "./features/FeatureVideo";
@@ -7,7 +6,7 @@ import FeatureDescription from "./features/FeatureDescription";
 import { features } from "./features/featureData";
 
 const FeatureSection = () => {
-  const [selectedFeature, setSelectedFeature] = useState<any>(null);
+  const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-black/20">
