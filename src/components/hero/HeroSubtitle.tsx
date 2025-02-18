@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const HeroSubtitle = () => {
@@ -11,22 +10,11 @@ const HeroSubtitle = () => {
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl text-left"
     >
       <div className="mb-8">
-        <p>Drowning in endless ChatGPT messages? Organise your conversations so you never lose a key idea again.</p>
+        <p>Lost scrolling through endless ChatGPT messages? Struggling to stay on track and keep your train of thought?</p>
       </div>
 
-      <div className="text-white space-y-4">
-        <div className="flex items-start gap-2">
-          <span className="half-highlight">Bookmark Key Messages:</span> Save crucial insights—from research notes to code snippets.
-        </div>
-        <div className="flex items-start gap-2">
-          <span className="half-highlight">Highlight Essential Points:</span> Capture takeaways instantly without endless scrolling.
-        </div>
-        <div className="flex items-start gap-2">
-          <span className="half-highlight">Intuitive Organization:</span> Sort your AI content into easy-to-navigate folders.
-        </div>
-        <div className="flex items-start gap-2">
-          <span className="half-highlight">Sticky Notes:</span> Add personal context to your saved conversations.
-        </div>
+      <div className="text-white">
+        The only browser extension designed to <span className="half-highlight">bookmark specific messages</span>, <span className="half-highlight">pin contextual notes</span>, <span className="half-highlight">organise and navigate ideas seamlessly</span>.
       </div>
     </motion.div>
   );
