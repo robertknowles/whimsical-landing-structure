@@ -11,7 +11,8 @@ const HeroSubtitle = () => {
       className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl text-left"
     >
       <div className="mb-6">
-        <p>Drowning in endless ChatGPT messages? Organise your conversations so you never lose a key idea again.</p>
+        <p>Stop losing your most valuable ideas in the clutter.</p>
+        <p className="mt-3">Drowning in endless ChatGPT messages? Organise your conversations so you never lose a key idea again.</p>
       </div>
 
       <div className="text-white space-y-3">
