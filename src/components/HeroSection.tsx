@@ -4,7 +4,7 @@ import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
 import LaunchingSoonButton from "./hero/LaunchingSoonButton";
 import VimeoPlayer from "./VimeoPlayer";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -57,14 +57,29 @@ const HeroSection = () => {
           }}
           initial="hidden"
           animate="visible"
-          className="mt-16 w-full"
+          className="mt-24 w-full" // Increased spacing from mt-16 to mt-24
         >
           <div className="grid grid-cols-5 gap-4 mb-8 text-center">
-            <div className="text-emerald-500 font-medium">Bookmark or Highlight</div>
-            <div className="text-emerald-500 font-medium">Pin Sticky Notes</div>
-            <div className="text-emerald-500 font-medium">Ready-Made Workspaces</div>
-            <div className="text-emerald-500 font-medium">Message Navigation</div>
-            <div className="text-emerald-500 font-medium">Folder Organisation</div>
+            <div className="space-y-4">
+              <Bookmark className="w-6 h-6 text-emerald-500 mx-auto" />
+              <div className="text-emerald-500 font-medium">Bookmark or Highlight</div>
+            </div>
+            <div className="space-y-4">
+              <StickyNote className="w-6 h-6 text-emerald-500 mx-auto" />
+              <div className="text-emerald-500 font-medium">Pin Sticky Notes</div>
+            </div>
+            <div className="space-y-4">
+              <Grid className="w-6 h-6 text-emerald-500 mx-auto" />
+              <div className="text-emerald-500 font-medium">Ready-Made Workspaces</div>
+            </div>
+            <div className="space-y-4">
+              <Navigation className="w-6 h-6 text-emerald-500 mx-auto" />
+              <div className="text-emerald-500 font-medium">Message Navigation</div>
+            </div>
+            <div className="space-y-4">
+              <Folder className="w-6 h-6 text-emerald-500 mx-auto" />
+              <div className="text-emerald-500 font-medium">Folder Organisation</div>
+            </div>
             
             <div className="text-white text-sm">Save key snippets- from research notes to code</div>
             <div className="text-white text-sm">Attach personal context and keep your train of thought</div>
