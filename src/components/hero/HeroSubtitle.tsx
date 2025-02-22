@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const HeroSubtitle = () => {
@@ -8,25 +7,15 @@ const HeroSubtitle = () => {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="text-xl md:text-2xl text-muted-foreground space-y-4 text-left max-w-2xl"
+      className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl text-left"
     >
-      <ul className="space-y-3">
-        <li>
-          <span className="text-emerald-500">Bookmark or Highlight:</span> Save key snippets- from research notes to code.
-        </li>
-        <li>
-          <span className="text-emerald-500">Pin Sticky Notes:</span> Attach personal context and keep your train of thought.
-        </li>
-        <li>
-          <span className="text-emerald-500">Ready-Made Workspaces:</span> Organise projects, from essays to research and code.
-        </li>
-        <li>
-          <span className="text-emerald-500">Message Navigation:</span> Quickly jump back to original messages for full context.
-        </li>
-        <li>
-          <span className="text-emerald-500">Folder Organisation:</span> Sort your AI content into easy-to-navigate folders.
-        </li>
-      </ul>
+      <div className="mb-8">
+        <p>Lost scrolling through endless ChatGPT messages? Struggling to stay on track and keep your train of thought?</p>
+      </div>
+
+      <div className="text-white">
+        The only browser extension designed to <span className="half-highlight">bookmark specific messages</span>, <span className="half-highlight">pin contextual notes</span>, <span className="half-highlight">organise and navigate ideas seamlessly</span>.
+      </div>
     </motion.div>
   );
 };
