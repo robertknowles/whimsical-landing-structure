@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const HeroSubtitle = () => {
@@ -10,11 +11,26 @@ const HeroSubtitle = () => {
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl text-left"
     >
       <div className="mb-8">
-        <p>Lost scrolling through endless ChatGPT messages? Struggling to stay on track and keep your train of thought?</p>
+        <p>Drowning in endless ChatGPT messages? Organise your conversations so you never lose a key idea again.</p>
       </div>
 
-      <div className="text-white">
-        The only browser extension designed to <span className="half-highlight">bookmark specific messages</span>, <span className="half-highlight">pin contextual notes</span>, <span className="half-highlight">organise and navigate ideas seamlessly</span>.
+      <div className="text-white space-y-4">
+        <p className="font-semibold mb-4">How AI power users save every breakthrough:</p>
+        <div className="flex items-start gap-2">
+          <span className="half-highlight">Bookmark Key Messages:</span> Save crucial insights—from research notes to code snippets.
+        </div>
+        <div className="flex items-start gap-2">
+          <span className="half-highlight">Highlighting Tool:</span> Capture essential sentences instantly without endless scrolling.
+        </div>
+        <div className="flex items-start gap-2">
+          <span className="half-highlight">Intuitive Organisation:</span> Sort your AI content into easy-to-navigate folders.
+        </div>
+        <div className="flex items-start gap-2">
+          <span className="half-highlight">Sticky Notes:</span> Add personal context to your saved conversations.
+        </div>
+        <div className="flex items-start gap-2">
+          <span className="half-highlight">Workspaces & Templates:</span> Jump-start any project—whether you're writing essays, conducting research, or developing code—with ready-made structures that adapt to your workflow.
+        </div>
       </div>
     </motion.div>
   );
