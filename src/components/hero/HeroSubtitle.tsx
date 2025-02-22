@@ -15,11 +15,11 @@ const HeroSubtitle = () => {
       </div>
 
       <div className="text-white">
-        <span className="text-emerald-500">Bookmark or Highlight:</span> Save key snippets- from research notes to code.<br/>
-        <span className="text-emerald-500">Pin Sticky Notes:</span> Attach personal context and keep your train of thought.<br/>
-        <span className="text-emerald-500">Ready-Made Workspaces:</span> Organise projects, from essays to research and code.<br/>
-        <span className="text-emerald-500">Message Navigation:</span> Quickly jump back to original messages for full context.<br/>
-        <span className="text-emerald-500">Folder Organisation:</span> Sort your AI content into easy-to-navigate folders.
+        <span className="half-highlight">Bookmark or Highlight:</span> Save key snippets- from research notes to code.<br/>
+        <span className="half-highlight">Pin Sticky Notes:</span> Attach personal context and keep your train of thought.<br/>
+        <span className="half-highlight">Ready-Made Workspaces:</span> Organise projects, from essays to research and code.<br/>
+        <span className="half-highlight">Message Navigation:</span> Quickly jump back to original messages for full context.<br/>
+        <span className="half-highlight">Folder Organisation:</span> Sort your AI content into easy-to-navigate folders.
       </div>
     </motion.div>
   );
