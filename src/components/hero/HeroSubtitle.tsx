@@ -1,4 +1,6 @@
+
 import { motion } from "framer-motion";
+
 const HeroSubtitle = () => {
   return <motion.div variants={{
     hidden: {
@@ -17,7 +19,7 @@ const HeroSubtitle = () => {
       </div>
 
       <div className="text-white space-y-3">
-        <p className="font-semibold mb-3 text-sm md:text-base">How AI power users save every breakthrough:</p>
+        <p className="font-semibold mb-3 text-sm md:text-base">Stop losing your most valuable ideas in the clutter.</p>
         <ul className="space-y-1">
           <li className="flex items-start gap-2 text-sm md:text-base">
             <span className="text-muted-foreground mt-1">•</span>
@@ -53,4 +55,5 @@ const HeroSubtitle = () => {
       </div>
     </motion.div>;
 };
+
 export default HeroSubtitle;
