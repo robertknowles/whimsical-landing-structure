@@ -18,7 +18,7 @@ const HeroSubtitle = () => {
 
       <div className="text-white space-y-3">
         <p className="font-semibold mb-3 text-sm md:text-base">How AI power users save every breakthrough:</p>
-        <ul className="space-y-3">
+        <ul className="space-y-2">
           <li className="flex items-start gap-2 text-sm md:text-base">
             <span className="text-muted-foreground mt-1">•</span>
             <div>
