@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const HeroSubtitle = () => {
@@ -14,7 +15,11 @@ const HeroSubtitle = () => {
       </div>
 
       <div className="text-white">
-        The only browser extension designed to <span className="half-highlight">bookmark specific messages</span>, <span className="half-highlight">pin contextual notes</span>, <span className="half-highlight">organise and navigate ideas seamlessly</span>.
+        <span className="half-highlight">Bookmark or Highlight:</span> Save key snippets- from research notes to code.<br/>
+        <span className="half-highlight">Pin Sticky Notes:</span> Attach personal context and keep your train of thought.<br/>
+        <span className="half-highlight">Ready-Made Workspaces:</span> Organise projects, from essays to research and code.<br/>
+        <span className="half-highlight">Message Navigation:</span> Quickly jump back to original messages for full context.<br/>
+        <span className="half-highlight">Folder Organisation:</span> Sort your AI content into easy-to-navigate folders.
       </div>
     </motion.div>
   );
