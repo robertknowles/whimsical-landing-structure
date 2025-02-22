@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
@@ -21,15 +22,6 @@ const HeroSection = () => {
           >
             <HeroTitle />
             <HeroSubtitle />
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="flex flex-wrap gap-4 relative mt-6 md:mt-8"
-            >
-              <LaunchingSoonButton />
-            </motion.div>
           </motion.div>
 
           {/* Right Side - Video */}
@@ -47,6 +39,35 @@ const HeroSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Features Table and CTA - Full Width */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          className="mt-16 w-full"
+        >
+          <div className="grid grid-cols-5 gap-4 mb-8 text-center">
+            <div className="text-emerald-500 font-medium">Bookmark or Highlight</div>
+            <div className="text-emerald-500 font-medium">Pin Sticky Notes</div>
+            <div className="text-emerald-500 font-medium">Ready-Made Workspaces</div>
+            <div className="text-emerald-500 font-medium">Message Navigation</div>
+            <div className="text-emerald-500 font-medium">Folder Organisation</div>
+            
+            <div className="text-white text-sm">Save key snippets- from research notes to code</div>
+            <div className="text-white text-sm">Attach personal context and keep your train of thought</div>
+            <div className="text-white text-sm">Organise projects, from essays to research and code</div>
+            <div className="text-white text-sm">Quickly jump back to original messages for full context</div>
+            <div className="text-white text-sm">Sort your AI content into easy-to-navigate folders</div>
+          </div>
+
+          <div className="flex justify-center">
+            <LaunchingSoonButton />
+          </div>
+        </motion.div>
       </div>
 
       {/* Bouncing Arrow */}
