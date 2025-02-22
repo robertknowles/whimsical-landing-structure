@@ -10,8 +10,8 @@ const HeroTitle = () => {
       }}
       className="text-4xl md:text-6xl font-bold mb-4 text-gradient text-left"
     >
-      Stop losing <br />
-      <span className="text-emerald-500">ChatGPT's most valuable insights</span>
+      Stop losing ChatGPT's most <br />
+      <span className="text-emerald-500">valuable insights</span>
     </motion.h1>
   );
 };
