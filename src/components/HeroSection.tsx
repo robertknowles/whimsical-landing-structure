@@ -22,6 +22,15 @@ const HeroSection = () => {
           >
             <HeroTitle />
             <HeroSubtitle />
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="flex flex-wrap gap-4 relative mt-6 md:mt-8"
+            >
+              <LaunchingSoonButton />
+            </motion.div>
           </motion.div>
 
           {/* Right Side - Video */}
@@ -40,7 +49,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Features Table and CTA - Full Width */}
+        {/* Features Table - Full Width */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
@@ -62,10 +71,6 @@ const HeroSection = () => {
             <div className="text-white text-sm">Organise projects, from essays to research and code</div>
             <div className="text-white text-sm">Quickly jump back to original messages for full context</div>
             <div className="text-white text-sm">Sort your AI content into easy-to-navigate folders</div>
-          </div>
-
-          <div className="flex justify-center">
-            <LaunchingSoonButton />
           </div>
         </motion.div>
       </div>
