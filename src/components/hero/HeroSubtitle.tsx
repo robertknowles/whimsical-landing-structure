@@ -11,15 +11,15 @@ const HeroSubtitle = () => {
       opacity: 1,
       y: 0
     }
-  }} className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl text-left">
-      <div className="mb-6">
+  }} className="text-base md:text-lg text-muted-foreground mb-6 max-w-xl text-left">
+      <div className="mb-4">
         <p>Feeling overwhelmed by endless ChatGPT messages?</p>
-        <p className="mt-3">Tired of endlessly scrolling through cluttered conversations just to find that one breakthrough idea?</p>
-        <p className="mt-3">Struggling to keep track of your most valuable insights amid a flood of AI responses?</p>
+        <p className="mt-2">Tired of endlessly scrolling through cluttered conversations just to find that one breakthrough idea?</p>
+        <p className="mt-2">Struggling to keep track of your most valuable insights amid a flood of AI responses?</p>
       </div>
 
-      <div className="text-white space-y-3">
-        <p className="font-semibold mb-3 text-sm md:text-base">Stop losing your most valuable ideas in the clutter.</p>
+      <div className="text-white space-y-2">
+        <p className="font-semibold mb-2 text-sm md:text-base">Stop losing your most valuable ideas in the clutter.</p>
         <ul className="space-y-1">
           <li className="flex items-start gap-2 text-sm md:text-base">
             <span className="text-muted-foreground mt-1">•</span>
