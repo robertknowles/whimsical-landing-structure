@@ -16,21 +16,38 @@ const HeroSubtitle = () => {
 
       <div className="text-white space-y-3">
         <p className="font-semibold mb-3 text-sm md:text-base">How AI power users save every breakthrough:</p>
-        <div className="flex items-start gap-2 text-sm md:text-base">
-          <span className="half-highlight">Bookmark Key Messages:</span> Save crucial insights—from research notes to code snippets.
-        </div>
-        <div className="flex items-start gap-2 text-sm md:text-base">
-          <span className="half-highlight">Highlighting Tool:</span> Capture essential sentences instantly without endless scrolling.
-        </div>
-        <div className="flex items-start gap-2 text-sm md:text-base">
-          <span className="half-highlight">Intuitive Organisation:</span> Sort your AI content into easy-to-navigate folders.
-        </div>
-        <div className="flex items-start gap-2 text-sm md:text-base">
-          <span className="half-highlight">Sticky Notes:</span> Add personal context to your saved conversations.
-        </div>
-        <div className="flex items-start gap-2 text-sm md:text-base">
-          <span className="half-highlight">Workspaces & Templates:</span> Jump-start any project—whether you're writing essays, conducting research, or developing code—with ready-made structures that adapt to your workflow.
-        </div>
+        <ul className="space-y-3">
+          <li className="flex items-start gap-2 text-sm md:text-base">
+            <span className="text-muted-foreground mt-1">•</span>
+            <div>
+              <span className="half-highlight">Bookmark Key Messages:</span> Save crucial insights—from research notes to code snippets.
+            </div>
+          </li>
+          <li className="flex items-start gap-2 text-sm md:text-base">
+            <span className="text-muted-foreground mt-1">•</span>
+            <div>
+              <span className="half-highlight">Highlighting Tool:</span> Capture essential sentences instantly without endless scrolling.
+            </div>
+          </li>
+          <li className="flex items-start gap-2 text-sm md:text-base">
+            <span className="text-muted-foreground mt-1">•</span>
+            <div>
+              <span className="half-highlight">Intuitive Organisation:</span> Sort your AI content into easy-to-navigate folders.
+            </div>
+          </li>
+          <li className="flex items-start gap-2 text-sm md:text-base">
+            <span className="text-muted-foreground mt-1">•</span>
+            <div>
+              <span className="half-highlight">Sticky Notes:</span> Add personal context to your saved conversations.
+            </div>
+          </li>
+          <li className="flex items-start gap-2 text-sm md:text-base">
+            <span className="text-muted-foreground mt-1">•</span>
+            <div>
+              <span className="half-highlight">Workspaces & Templates:</span> Jump-start any project—whether you're writing essays, conducting research, or developing code—with ready-made structures that adapt to your workflow.
+            </div>
+          </li>
+        </ul>
       </div>
     </motion.div>
   );
