@@ -11,7 +11,7 @@ const HeroSubtitle = () => {
       className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl text-left"
     >
       <div className="mb-8">
-        <p>Lost scrolling through endless ChatGPT messages? Struggling to stay on track and keep your train of thought?</p>
+        <p>Struggling to keep track of ChatGPT's most valuable responses? Tired of endlessly scrolling just to uncover that breakthrough insight?</p>
       </div>
 
       <div className="text-white">
