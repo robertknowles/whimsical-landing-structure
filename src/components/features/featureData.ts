@@ -1,5 +1,4 @@
-
-import { MessageSquare, StickyNote, FolderTree, Navigation, Layout } from "lucide-react";
+import { MessageSquare, StickyNote, FolderTree, Navigation } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface Feature {
@@ -13,63 +12,51 @@ export interface Feature {
 
 export const features: Feature[] = [
   {
-    id: "bookmark-highlight",
-    title: "Bookmark or Highlight",
-    description: "Save key snippets - from research notes to code.",
+    id: "bookmarking-highlighting",
+    title: "Message Bookmarking & Highlighting",
+    description: "Quickly save entire messages or highlight specific sentences to capture exactly what matters without the clutter.",
     expandedDetails: [
-      "Bookmark entire messages for future reference.",
-      "Highlight specific text within messages.",
-      "Save important code snippets and research notes."
+      "Bookmark entire messages and save directly to folders.",
+      "Highlight specific sentences for quick reference.",
+      "Keep track of important information with our intuitive bookmarking system."
     ],
     icon: MessageSquare,
-    vimeoId: "1041458304" // Saving Messages
+    vimeoId: "1041458304" // (1) SavingMessages
   },
   {
     id: "sticky-notes",
-    title: "Pin Sticky Notes",
-    description: "Attach personal context and keep your train of thought.",
+    title: "Sticky Notes",
+    description: "Add customizable sticky notes to saved messages, providing context and clarity to your ideas.",
     expandedDetails: [
-      "Add personal notes to any saved content.",
-      "Keep track of your thought process.",
-      "Maintain context with custom annotations."
+      "Toggle sticky note visibility for a clean workspace.",
+      "Annotate messages with reminders or additional details.",
+      "Organize and manage your thoughts efficiently."
     ],
     icon: StickyNote,
-    vimeoId: "1041460649" // Creating Sticky Note
+    vimeoId: "1041460649" // (2) CreatingStickyNote
   },
   {
-    id: "workspaces",
-    title: "Ready-Made Workspaces",
-    description: "Organise projects, from essays to research and code.",
+    id: "folders",
+    title: "Folder Organization",
+    description: "Organize your saved content into folders with a seamless drag-and-drop interface to keep everything structured.",
     expandedDetails: [
-      "Create dedicated spaces for different projects.",
-      "Organize content by topic or purpose.",
-      "Keep your work structured and accessible."
+      "Create and manage folders to group related messages and notes.",
+      "Rearrange content easily using drag-and-drop functionality.",
+      "Access your saved content in a streamlined, organized way."
     ],
-    icon: Layout,
-    vimeoId: "1041463171" // Folder Organisation
+    icon: FolderTree,
+    vimeoId: "1041463171" // (3) FolderOrganisation
   },
   {
     id: "navigation",
-    title: "Message Navigation",
-    description: "Quickly jump back to original messages for full context.",
+    title: "Smart Navigation",
+    description: "Navigate effortlessly with instant previews and seamless access to original chat locations.",
     expandedDetails: [
-      "Easily find and revisit important conversations.",
-      "Navigate between related messages seamlessly.",
-      "Maintain continuity in your work."
+      "Preview saved messages instantly with a single click.",
+      "Jump to original chat locations with ease.",
+      "Navigate your bookmarks and notes effortlessly"
     ],
     icon: Navigation,
-    vimeoId: "1041464413" // Navigation
-  },
-  {
-    id: "folder-organisation",
-    title: "Folder Organisation",
-    description: "Sort your AI content into easy-to-navigate folders.",
-    expandedDetails: [
-      "Create a logical folder structure for your content.",
-      "Easily categorize and find saved messages.",
-      "Keep your workspace clean and organized."
-    ],
-    icon: FolderTree,
-    vimeoId: "1041463171" // Folder Organisation
+    vimeoId: "1041464413" // (4) Navigation
   }
 ];
