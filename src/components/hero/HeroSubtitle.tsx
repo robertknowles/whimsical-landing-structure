@@ -1,15 +1,15 @@
-
 import { motion } from "framer-motion";
-
 const HeroSubtitle = () => {
-  return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl text-left"
-    >
+  return <motion.div variants={{
+    hidden: {
+      opacity: 0,
+      y: 20
+    },
+    visible: {
+      opacity: 1,
+      y: 0
+    }
+  }} className="text-base md:text-lg text-muted-foreground mb-8 max-w-xl text-left">
       <div className="mb-6">
         <p>Feeling overwhelmed by endless ChatGPT messages?</p>
         <p className="mt-3">Tired of endlessly scrolling through cluttered conversations just to find that one breakthrough idea?</p>
@@ -18,7 +18,7 @@ const HeroSubtitle = () => {
 
       <div className="text-white space-y-3">
         <p className="font-semibold mb-3 text-sm md:text-base">How AI power users save every breakthrough:</p>
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           <li className="flex items-start gap-2 text-sm md:text-base">
             <span className="text-muted-foreground mt-1">•</span>
             <div>
@@ -51,8 +51,6 @@ const HeroSubtitle = () => {
           </li>
         </ul>
       </div>
-    </motion.div>
-  );
+    </motion.div>;
 };
-
 export default HeroSubtitle;
