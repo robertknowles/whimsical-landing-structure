@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
@@ -21,7 +22,7 @@ const HeroSection = () => {
           >
             <div className="flex flex-col items-start mb-8">
               <img 
-                src="/lovable-uploads/7284f7f5-9df5-4a5b-b4d1-7401f28fac1f.png" 
+                src="/lovable-uploads/0f7a5e80-5336-4242-af48-d6018ec901fd.png" 
                 alt="TidyMind Logo" 
                 className="w-48 h-48 mb-6"
               />
