@@ -9,6 +9,16 @@ import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "luc
 const HeroSection = () => {
   return (
     <section className="container mx-auto px-4 pt-32 pb-32 md:pt-40 md:pb-48 lg:pt-48 lg:pb-64 min-h-screen relative">
+      {/* Logo + Text Header */}
+      <div className="flex items-center justify-center gap-4 mb-16">
+        <img 
+          src="/lovable-uploads/f307d5fa-690d-4903-b84e-65ad5f15eed6.png" 
+          alt="TidyMind Logo" 
+          className="w-12 h-12"
+        />
+        <h1 className="text-white text-3xl font-bold">TidyMind</h1>
+      </div>
+
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
@@ -57,7 +67,7 @@ const HeroSection = () => {
           }}
           initial="hidden"
           animate="visible"
-          className="mt-24 w-full" // Increased spacing from mt-16 to mt-24
+          className="mt-24 w-full"
         >
           <div className="grid grid-cols-5 gap-4 mb-8 text-center">
             <div className="space-y-4">
