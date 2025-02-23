@@ -20,11 +20,11 @@ const HeroSection = () => {
             }}
             className="text-left order-1 lg:order-1"
           >
-            <div className="flex flex-col items-start mb-8">
+            <div className="flex flex-col items-start mb-2">
               <img 
                 src="/lovable-uploads/0f7a5e80-5336-4242-af48-d6018ec901fd.png" 
                 alt="TidyMind Logo" 
-                className="w-48 h-48 mb-6"
+                className="w-48 h-48 mb-2"
               />
             </div>
             <HeroTitle />
