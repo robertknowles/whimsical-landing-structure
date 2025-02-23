@@ -10,11 +10,11 @@ const NavigationMenu = () => {
   return (
     <Menubar className="fixed top-0 left-0 right-0 z-50 flex items-center bg-background/80 backdrop-blur-sm border-none">
       <div className="container mx-auto flex items-center">
-        <div className="flex-1 flex items-center">
+        <div className="flex-1 flex items-center justify-center">
           <img 
             src="/lovable-uploads/a6485826-bd22-4a7e-905f-59a8d32cecba.png" 
             alt="TidyMind Logo" 
-            className="h-8 md:h-10 mr-auto"
+            className="h-8 md:h-10"
           />
         </div>
         <div className="flex justify-center gap-1 sm:gap-2 md:gap-4 overflow-x-auto">
