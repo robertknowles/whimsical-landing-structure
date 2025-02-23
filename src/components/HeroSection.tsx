@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
@@ -9,15 +8,6 @@ import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "luc
 const HeroSection = () => {
   return (
     <section className="container mx-auto px-4 pt-32 pb-32 md:pt-40 md:pb-48 lg:pt-48 lg:pb-64 min-h-screen relative">
-      {/* Logo + Text Header */}
-      <div className="flex flex-col items-center justify-center gap-6 mb-16">
-        <img 
-          src="/lovable-uploads/7284f7f5-9df5-4a5b-b4d1-7401f28fac1f.png" 
-          alt="TidyMind Logo" 
-          className="w-32 h-32"
-        />
-      </div>
-
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
@@ -29,6 +19,13 @@ const HeroSection = () => {
             }}
             className="text-left order-1 lg:order-1"
           >
+            <div className="flex flex-col items-start mb-8">
+              <img 
+                src="/lovable-uploads/7284f7f5-9df5-4a5b-b4d1-7401f28fac1f.png" 
+                alt="TidyMind Logo" 
+                className="w-48 h-48 mb-6"
+              />
+            </div>
             <HeroTitle />
             <HeroSubtitle />
             <motion.div
