@@ -10,13 +10,12 @@ const HeroSection = () => {
   return (
     <section className="container mx-auto px-4 pt-32 pb-32 md:pt-40 md:pb-48 lg:pt-48 lg:pb-64 min-h-screen relative">
       {/* Logo + Text Header */}
-      <div className="flex items-center justify-center gap-4 mb-16">
+      <div className="flex flex-col items-center justify-center gap-6 mb-16">
         <img 
-          src="/lovable-uploads/f307d5fa-690d-4903-b84e-65ad5f15eed6.png" 
+          src="/lovable-uploads/7284f7f5-9df5-4a5b-b4d1-7401f28fac1f.png" 
           alt="TidyMind Logo" 
-          className="w-12 h-12"
+          className="w-32 h-32"
         />
-        <h1 className="text-white text-3xl font-bold">TidyMind</h1>
       </div>
 
       <div className="max-w-[1600px] mx-auto">
