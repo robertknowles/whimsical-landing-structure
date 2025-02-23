@@ -61,23 +61,23 @@ const HeroSection = () => {
         >
           <div className="grid grid-cols-5 gap-4 mb-8 text-center">
             <div className="space-y-4">
-              <Bookmark className="w-6 h-6 text-emerald-500 mx-auto" />
+              <Bookmark className="w-6 h-6 text-white mx-auto" />
               <div className="text-emerald-500 font-medium">Bookmark or Highlight</div>
             </div>
             <div className="space-y-4">
-              <StickyNote className="w-6 h-6 text-emerald-500 mx-auto" />
+              <StickyNote className="w-6 h-6 text-white mx-auto" />
               <div className="text-emerald-500 font-medium">Pin Sticky Notes</div>
             </div>
             <div className="space-y-4">
-              <Grid className="w-6 h-6 text-emerald-500 mx-auto" />
+              <Grid className="w-6 h-6 text-white mx-auto" />
               <div className="text-emerald-500 font-medium">Ready-Made Workspaces</div>
             </div>
             <div className="space-y-4">
-              <Navigation className="w-6 h-6 text-emerald-500 mx-auto" />
+              <Navigation className="w-6 h-6 text-white mx-auto" />
               <div className="text-emerald-500 font-medium">Message Navigation</div>
             </div>
             <div className="space-y-4">
-              <Folder className="w-6 h-6 text-emerald-500 mx-auto" />
+              <Folder className="w-6 h-6 text-white mx-auto" />
               <div className="text-emerald-500 font-medium">Folder Organisation</div>
             </div>
             
