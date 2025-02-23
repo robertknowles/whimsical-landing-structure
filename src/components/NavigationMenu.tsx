@@ -13,7 +13,7 @@ const NavigationMenu = () => {
         <img 
           src="/lovable-uploads/a6485826-bd22-4a7e-905f-59a8d32cecba.png" 
           alt="TidyMind Logo" 
-          className="h-4 md:h-5 mr-auto"
+          className="h-8 md:h-10 mr-auto"
         />
       </div>
       <div className="flex justify-center gap-1 sm:gap-2 md:gap-4 overflow-x-auto">
