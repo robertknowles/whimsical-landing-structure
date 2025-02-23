@@ -20,13 +20,6 @@ const HeroSection = () => {
             }}
             className="text-left order-1 lg:order-1"
           >
-            <div className="flex flex-col items-start">
-              <img 
-                src="/lovable-uploads/0f7a5e80-5336-4242-af48-d6018ec901fd.png" 
-                alt="TidyMind Logo" 
-                className="w-8 h-8 md:w-10 md:h-10"
-              />
-            </div>
             <HeroTitle />
             <HeroSubtitle />
             <motion.div
@@ -64,7 +57,7 @@ const HeroSection = () => {
           }}
           initial="hidden"
           animate="visible"
-          className="mt-24 w-full"
+          className="mt-24 w-full" // Increased spacing from mt-16 to mt-24
         >
           <div className="grid grid-cols-5 gap-4 mb-8 text-center">
             <div className="space-y-4">
