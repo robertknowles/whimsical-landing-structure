@@ -8,7 +8,7 @@ import {
 
 const NavigationMenu = () => {
   return (
-    <Menubar className="fixed top-0 left-0 right-0 z-50 flex items-center bg-background/80 backdrop-blur-sm border-none">
+    <Menubar className="fixed top-0 left-0 right-0 z-50 flex items-center bg-background/80 backdrop-blur-sm border-none pt-4">
       <div className="container mx-auto flex items-center justify-between px-4">
         <img 
           src="/lovable-uploads/da9c96ed-e76c-456c-88ac-3db8e2de639c.png" 
