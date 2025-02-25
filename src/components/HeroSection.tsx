@@ -8,7 +8,7 @@ import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "luc
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 pt-32 pb-32 md:pt-40 md:pb-48 lg:pt-48 lg:pb-64 min-h-screen relative">
+    <section className="container mx-auto px-4 pt-4 pb-32 md:pt-4 md:pb-48 lg:pt-4 lg:pb-64 min-h-screen relative">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
