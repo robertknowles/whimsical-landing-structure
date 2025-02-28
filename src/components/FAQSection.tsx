@@ -32,7 +32,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
+    <section id="faq" className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
