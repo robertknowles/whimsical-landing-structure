@@ -8,7 +8,7 @@ import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "luc
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 pt-24 md:pt-32 pb-32 md:pb-48 lg:pb-64 min-h-screen relative">
+    <section className="container mx-auto px-4 pt-24 md:pt-32 pb-16 md:pb-24 lg:pb-32 min-h-screen relative">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
@@ -57,7 +57,7 @@ const HeroSection = () => {
           }}
           initial="hidden"
           animate="visible"
-          className="mt-24 w-full" // Increased spacing from mt-16 to mt-24
+          className="mt-24 w-full"
         >
           <div className="grid grid-cols-5 gap-4 mb-8 text-center">
             <div className="space-y-4">
@@ -90,9 +90,9 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Bouncing Arrow - Changed position from bottom-24 to bottom-48 to move it up */}
+      {/* Bouncing Arrow - Changed position to be closer to Feature section */}
       <motion.div 
-        className="absolute bottom-48 left-1/2 -translate-x-1/2 hidden md:block"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ 
           y: [0, 10, 0],
         }}

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import FeatureCard from "./features/FeatureCard";
@@ -9,7 +10,7 @@ const FeatureSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
-    <section id="features" className="py-24 md:py-32 lg:py-40 bg-black/20">
+    <section id="features" className="py-16 md:py-24 lg:py-32 bg-black/20">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
