@@ -90,9 +90,9 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Bouncing Arrow */}
+      {/* Bouncing Arrow - Changed position from bottom-24 to bottom-48 to move it up */}
       <motion.div 
-        className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:block"
+        className="absolute bottom-48 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ 
           y: [0, 10, 0],
         }}
