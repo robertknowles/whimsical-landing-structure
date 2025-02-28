@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
@@ -69,7 +70,7 @@ const PricingSection = () => {
               </li>
             </ul>
             
-            <Button className="w-full glass hover:bg-white/20">Get Started</Button>
+            <Button className="w-full glass hover:bg-white/20 text-white">Get Started</Button>
           </div>
 
           {/* Paid Plan */}
@@ -113,7 +114,7 @@ const PricingSection = () => {
               </li>
             </ul>
             
-            <Button className="w-full glass hover:bg-white/20">Get Premium</Button>
+            <Button className="w-full glass hover:bg-white/20 text-white">Get Premium</Button>
           </div>
         </motion.div>
       </motion.div>
