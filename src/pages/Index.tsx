@@ -5,7 +5,6 @@ import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import PricingSection from "@/components/PricingSection";
-import TestimonialSection from "@/components/TestimonialSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
@@ -14,10 +13,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <NavigationMenu />
       <HeroSection />
-      <FeatureSection />
       <BenefitsSection />
+      <FeatureSection />
       <PricingSection />
-      <TestimonialSection />
       <FAQSection />
       <Footer />
     </div>
