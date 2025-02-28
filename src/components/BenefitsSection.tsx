@@ -4,16 +4,28 @@ import { motion } from "framer-motion";
 const BenefitsSection = () => {
   const comparisonItems = [
     {
-      gptWorkspace: "Bookmark specific messages and highlights",
+      gptWorkspace: "Save individual messages or snippets",
       others: "Save entire chat channels only"
     },
     {
-      gptWorkspace: "Add contextual notes to any message",
+      gptWorkspace: "Highlight specific sentences for clarity",
       others: "No way to highlight specific insights"
     },
     {
-      gptWorkspace: "Organize with folders and quick navigation",
-      others: "Limited organization capabilities"
+      gptWorkspace: "Annotate messages with sticky notes",
+      others: "No annotation capabilities"
+    },
+    {
+      gptWorkspace: "Create folders with quick drag-and-drop",
+      others: "Limited folder organization"
+    },
+    {
+      gptWorkspace: "Jump back to original messages instantly",
+      others: "No direct navigation"
+    },
+    {
+      gptWorkspace: "Pre-built templates for workflows",
+      others: "Not available"
     }
   ];
 
