@@ -24,7 +24,7 @@ const BenefitsSection = () => {
       others: "No direct navigation"
     },
     {
-      gptWorkspace: "Pre-built templates for workflows",
+      gptWorkspace: "Pre-built templates to structure projects",
       others: "Not available"
     }
   ];
