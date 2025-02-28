@@ -1,9 +1,19 @@
+
 import { motion } from "framer-motion";
 
 const BenefitsSection = () => {
   return (
     <section className="py-12 md:py-16 lg:py-24">
       <div className="container mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-center mb-10"
+        >
+          GPTWorkspace Vs Competitors
+        </motion.h2>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +47,7 @@ const BenefitsSection = () => {
             whileHover={{ scale: 1.02 }}
             className="glass-card bg-emerald-500/10 border-emerald-500/20"
           >
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-emerald-500">Our Extension</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-emerald-500">GPTWorkspace</h3>
             <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start">
                 <span className="mr-2">✅</span>
