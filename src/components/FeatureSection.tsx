@@ -10,7 +10,7 @@ const FeatureSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   return (
-    <section id="features" className="py-8 md:py-12 lg:py-16 bg-black/20">
+    <section id="features" className="py-16 md:py-24 lg:py-32 bg-black/20">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
