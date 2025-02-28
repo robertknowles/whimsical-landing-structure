@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import HeroTitle from "./hero/HeroTitle";
 import HeroSubtitle from "./hero/HeroSubtitle";
@@ -8,10 +7,9 @@ import { ChevronDown, Bookmark, StickyNote, Grid, Navigation, Folder } from "luc
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-4 pt-24 md:pt-32 pb-16 md:pb-24 lg:pb-32 min-h-screen relative">
+    <section className="container mx-auto px-4 pt-24 md:pt-32 pb-8 md:pb-12 lg:pb-16 min-h-screen relative">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Content */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -33,7 +31,6 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Video */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -49,7 +46,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Features Table - Full Width */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
@@ -90,9 +86,8 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Bouncing Arrow - Changed position to be closer to Feature section */}
       <motion.div 
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:block"
+        className="absolute bottom-2 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ 
           y: [0, 10, 0],
         }}
